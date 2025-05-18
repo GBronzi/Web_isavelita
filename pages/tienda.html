@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" href="../media/img/Logo.png" type="image/png">
+        <title>Productos - Isavelita</title>
+    </head>
+    <body class="pages">
+        <header>
+            <div class="logo-container">
+                <h1 class="logo-titulo">Isavelita</h1>
+            </div>
+            <nav>
+                <button class="hamburger" id="hamburger-btn-tienda" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-tienda">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="enlaces-index" id="menu-nav-tienda">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./mayorista.html">Mayorista</a></li>
+                        <li><a href="./cursos.html">Cursos</a></li>
+                        <li><a href="./acerca.html">Acerca</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>    
+        </header>
+        <main class="body-med">
+            <section>
+                <article>
+                    <div class="prodest">
+                        <h3> Velas de Soja</h3>
+                    </div>
+                    <div class="products-grip">
+                        <div class="products">
+                        <img src="../media/products/IMG_4059.png" alt="Vela falcon 1">
+                            <p>Vela Falcón</p>
+                        </div>
+                        <div class="products">
+                            <img src="../media/products/IMG_4035.png" alt="Vela avila">
+                            <p>Vela Ávila</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="prodest">
+                        <h3> Velas de Molde</h3>
+                    </div>
+                    <div class="products-grip">
+                        <div class="products">
+                            <img src="../media/products/IMG_4038.png" alt="Vela arcoiris">
+                            <p>Vela Arcoíris</p>
+                        </div>
+                        <div class="products">
+                            <img src="../media/products/IMG_4039.png" alt="Vela Corazon Floreado">
+                            <p>Vela Corazón floreado</p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="prodest">
+                        <h3> Decoración</h3>
+                    </div>
+                    <div class="products-grip">
+                        <div class="products">
+                            <img src="../media/products/IMG_4036.png" alt="Bandeja nube">
+                            <p>Bandeja Nube</p>
+                        </div>
+                        <div class="products">
+                            <img src="../media/products/IMG_4037.png" alt="Bandeja ovalada">
+                            <p>Bandeja Ovalada</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="pie-pagina">
+            <section>
+                <p>Siguenos en nuestras redes sociales</p>
+                <div class="icons">
+                    <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Facebook.png" alt="Facebook"></a>
+                    <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Whatsapp.png" alt="Whatsapp"></a>
+                </div>
+            </section>
+            <section class="pie-pagina">
+                <p>© 2025 Isavelita. Todos los derechos reservados.</p>
+            </section>
+        </footer>
+        <script>
+            const hamburgerBtnTienda = document.getElementById('hamburger-btn-tienda');
+            const menuNavTienda = document.getElementById('menu-nav-tienda');
+            hamburgerBtnTienda.addEventListener('click', function() {
+                menuNavTienda.classList.toggle('open');
+                this.setAttribute('aria-expanded', menuNavTienda.classList.contains('open'));
+            });
+            document.addEventListener('click', function(e) {
+                if (!menuNavTienda.contains(e.target) && !hamburgerBtnTienda.contains(e.target)) {
+                    menuNavTienda.classList.remove('open');
+                    hamburgerBtnTienda.setAttribute('aria-expanded', 'false');
+                }
+            });
+        </script>
+    </body>
+</html>

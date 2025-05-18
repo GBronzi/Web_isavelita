@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" href="../media/img/Logo.png" type="image/png">
+        <title>Cursos - Isavelita</title>
+    </head>
+    <body class="pages">
+        <header>
+            <div class="logo-container">
+                <h1 class="logo-titulo">Isavelita</h1>
+            </div>
+            <nav>
+                <button class="hamburger" id="hamburger-btn-cursos" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-cursos">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="enlaces-index" id="menu-nav-cursos">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./tienda.html">Productos</a></li>
+                        <li><a href="./mayorista.html">Mayorista</a></li>
+                        <li><a href="./acerca.html">Acerca</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>    
+        </header>
+        <main class="body-med">
+            <section class="prodest">
+                <article>
+                    <h1>✨ Cursos de Isavelita</h1>
+                </article>
+                <article>
+                    <h3>🌿 Curso de Velas de Soja</h3>
+                    <p class="contenedor">Sumérgete en el mundo aromático y relajante de las velas de soja. En este curso aprenderás desde cero cómo trabajar con cera vegetal, elegir esencias naturales, combinar colores y lograr acabados profesionales. Perfecto para quienes quieren emprender o disfrutar creando desde casa.</p>
+                </article>
+                <article>
+                    <h3>🕯️ Curso de Velas de Molde</h3>
+                    <p class="contenedor">¿Te encanta el arte en formas? Este taller está diseñado para enseñarte a crear velas con cera de soja y cera de abeja usando moldes de silicona. Aprende sobre técnicas de vertido, desmolde y personalización con pigmentos y aromas. Ideal para decorar o vender.</p>
+                </article>
+                <article>
+                    <h3>🪨 Curso de Piezas en Cemento Decorativo</h3>
+                    <p class="contenedor">Desarrolla tu creatividad con piezas únicas en cemento decorativo. En este curso aprenderás a hacer bandejas, portavelas, macetas y más. Te enseñaremos a trabajar con moldes, pigmentos, selladores y técnicas para lograr un acabado fino y moderno.</p>
+                </article>
+            </section>
+            </main>
+        <footer class="pie-pagina">
+            <section>
+                <p>Siguenos en nuestras redes sociales</p>
+                <div class="icons">
+                    <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Facebook.png" alt="Facebook"></a>
+                    <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Whatsapp.png" alt="Whatsapp"></a>
+                </div>
+            </section>
+            <section class="pie-pagina">
+                <p>© 2025 Isavelita. Todos los derechos reservados.</p>
+            </section>
+        </footer>
+    <script>
+        const hamburgerBtnCursos = document.getElementById('hamburger-btn-cursos');
+        const menuNavCursos = document.getElementById('menu-nav-cursos');
+        hamburgerBtnCursos.addEventListener('click', function() {
+            menuNavCursos.classList.toggle('open');
+            this.setAttribute('aria-expanded', menuNavCursos.classList.contains('open'));
+        });
+        document.addEventListener('click', function(e) {
+            if (!menuNavCursos.contains(e.target) && !hamburgerBtnCursos.contains(e.target)) {
+                menuNavCursos.classList.remove('open');
+                hamburgerBtnCursos.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+    </body>
+</html>

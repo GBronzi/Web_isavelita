@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" href="../media/img/Logo.png" type="image/png">
+        <title>Mayorista - Isavelita</title>
+    </head>
+    <body class="pages">
+        <header>
+            <div class="logo-container">
+                <h1 class="logo-titulo">Isavelita</h1>
+            </div>
+            <nav>
+                <button class="hamburger" id="hamburger-btn-mayorista" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-mayorista">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="enlaces-index" id="menu-nav-mayorista">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./tienda.html">Productos</a></li>
+                        <li><a href="./cursos.html">Cursos</a></li>
+                        <li><a href="./acerca.html">Acerca</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>    
+        </header>
+        <main class="body-med">
+            <section>
+                <article>
+                    <div class="prodest">
+                        <h3> Velas Mayorista</h3>
+                    </div>
+                    <di>
+                        <h4 class="prodest">¿COMO HACER UN PEDIDO MAYORISTA?</h4>
+                        <p class="contenedor">“Puedes ver las velas disponibles en este catálogo. cantidad minima son de 5 unidades por modelo, pásame el nombre del diseño, cantidades, colores y los aromas que prefieres. por el formulario de pedido."</p>
+                        <h4 class="prodest">¿QUE DEMORA TIENE EL PEDIDO ?</h4>
+                        <p class="contenedor">“La producción se realiza en un periodo de 15 días. Este plazo puede variar, siendo más corto o más largo, dependiendo de si se requiere algún color especial o de la cantidad solicitada.”</p>
+                        <h4 class="prodest">¿VIENE CON PACHACKING?</h4>
+                        <p class="contenedor">“Las velas vienen envueltas en papel film para evitar que se ensucien con polvo. Además, están protegidas con papel burbuja para evitar cualquier golpe. Incluyen etiquetas de aromas.</p>
+                    </di>
+                    <article class="contenedor">
+                        <p>Realiza tu pedido aca.</p>
+                        <button><a href="#">Formulario</a></button>
+                    </article>
+                    <div class="products-grip">
+                        <div class="products">
+                        <img src="../media/products/IMG_4059.png" alt="Vela falcon 1">
+                            <p>Vela Falcón</p>
+                        </div>
+                        <div class="products">
+                            <img src="../media/products/IMG_4035.png" alt="Vela avila">
+                            <p>Vela Ávila</p>
+                        </div>
+                        <div class="products">
+                            <img src="../media/products/IMG_4038.png" alt="Vela arcoiris">
+                            <p>Vela Arcoíris</p>
+                        </div>
+                        <div class="products">
+                            <img src="../media/products/IMG_4039.png" alt="Vela Corazon Floreado">
+                            <p>Vela Corazón floreado</p>
+                        </div>
+                        <div class="products">
+                            <img src="../media/products/IMG_4036.png" alt="Bandeja nube">
+                            <p>Bandeja Nube</p>
+                        </div>
+                        <div class="products">
+                            <img src="../media/products/IMG_4037.png" alt="Bandeja ovalada">
+                            <p>Bandeja Ovalada</p>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="pie-pagina">
+            <section>
+                <p>Siguenos en nuestras redes sociales</p>
+                <div class="icons">
+                    <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Facebook.png" alt="Facebook"></a>
+                    <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Whatsapp.png" alt="Whatsapp"></a>
+                </div>
+            </section>
+            <section class="pie-pagina">
+                <p>© 2025 Isavelita. Todos los derechos reservados.</p>
+            </section>
+        </footer>
+        <script>
+            const hamburgerBtnMayorista = document.getElementById('hamburger-btn-mayorista');
+            const menuNavMayorista = document.getElementById('menu-nav-mayorista');
+            hamburgerBtnMayorista.addEventListener('click', function() {
+                menuNavMayorista.classList.toggle('open');
+                this.setAttribute('aria-expanded', menuNavMayorista.classList.contains('open'));
+            });
+            document.addEventListener('click', function(e) {
+                if (!menuNavMayorista.contains(e.target) && !hamburgerBtnMayorista.contains(e.target)) {
+                    menuNavMayorista.classList.remove('open');
+                    hamburgerBtnMayorista.setAttribute('aria-expanded', 'false');
+                }
+            });
+        </script>
+    </body>
+</html>

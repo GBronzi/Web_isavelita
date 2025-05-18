@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="icon" href="../media/img/Logo.png" type="image/png">
+        <title>Acerca - Isavelita</title>
+    </head>
+    <body class="pages">
+        <header>
+            <div class="logo-container">
+                <h1 class="logo-titulo">Isavelita</h1>
+            </div>
+            <nav>
+                <button class="hamburger" id="hamburger-btn-acerca" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-acerca">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="enlaces-index" id="menu-nav-acerca">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./tienda.html">Productos</a></li>
+                        <li><a href="./mayorista.html">Mayorista</a></li>
+                        <li><a href="./cursos.html">Cursos</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>    
+        </header>
+        <main class="body-med">
+            <section class="prodest">
+                <img class="logo-acerca" src="../media/img/Logo_copia.png" alt="logo de Isavelita">
+                <article>
+                    <h1>🌸 Acerca de Isavelita</h1>
+                    <p class="contenedor">Isavelita nace desde el corazón, con el deseo de crear momentos cálidos, armoniosos y llenos de belleza. Somos una marca que fusiona el arte de lo hecho a mano con el amor por los detalles.</p>
+                    <p class="contenedor">Desde nuestras velas aromáticas de soja hasta las piezas decorativas en cemento, todo lo que hacemos tiene una intención: acompañarte, inspirarte y ayudarte a transformar tus espacios en rincones que abracen.</p>
+                </article>
+                <article>
+                    <h3>💖 Nuestra esencia</h3>
+                    <p class="contenedor">Creemos en la calma, en la belleza de lo simple, en los rituales cotidianos que nos hacen bien. Cada vela que encendés, cada bandeja que decorás, es parte de una historia que queremos construir contigo.</p>
+                </article>
+                <article>
+                    <h3>🌱 Hecho con conciencia</h3>
+                    <p class="contenedor">Usamos materiales nobles como la cera de soja y abeja, esencias de alta calidad, pigmentos naturales y cemento artesanal. Nuestro proceso es respetuoso con el ambiente y con tu bienestar.</p>
+                </article>
+                <article>
+                    <h3>👩‍🏫 También enseñamos</h3>
+                    <p class="contenedor">A través de nuestros cursos, compartimos lo que sabemos para que más personas puedan crear con sus manos. Porque creemos que el conocimiento, cuando se comparte con amor, florece.</p>
+                </article>
+                <article>
+                    <h3>🤝 Gracias por ser parte de esta comunidad tan linda que crece día a día.💫</h3>
+                </article>
+            </section>
+            </main>
+        <footer class="pie-pagina">
+            <section>
+                <p>Siguenos en nuestras redes sociales</p>
+                <div class="icons">
+                    <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Facebook.png" alt="Facebook"></a>
+                    <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
+                        <img src="../media/icons/Whatsapp.png" alt="Whatsapp"></a>
+                </div>
+            </section>
+            <section class="pie-pagina">
+                <p>© 2025 Isavelita. Todos los derechos reservados.</p>
+            </section>
+        </footer>
+    <script>
+        const hamburgerBtnAcerca = document.getElementById('hamburger-btn-acerca');
+        const menuNavAcerca = document.getElementById('menu-nav-acerca');
+        hamburgerBtnAcerca.addEventListener('click', function() {
+            menuNavAcerca.classList.toggle('open');
+            this.setAttribute('aria-expanded', menuNavAcerca.classList.contains('open'));
+        });
+        document.addEventListener('click', function(e) {
+            if (!menuNavAcerca.contains(e.target) && !hamburgerBtnAcerca.contains(e.target)) {
+                menuNavAcerca.classList.remove('open');
+                hamburgerBtnAcerca.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+    </body>
+</html>

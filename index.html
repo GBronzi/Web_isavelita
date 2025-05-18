@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isavelita</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./media/img/Logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="./media/img/Logo.png" alt="logo de Isavelita">
+            <nav>
+                <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="enlaces-index" id="menu-nav">
+                    <ul>
+                        <li><a href="./pages/tienda.html">Productos</a></li>
+                        <li><a href="./pages/mayorista.html">Mayorista</a></li>
+                        <li><a href="./pages/cursos.html">Cursos</a></li>
+                        <li><a href="./pages/acerca.html">Acerca</a></li>
+                        <li><a href="./pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>    
+    </header>
+    <main>
+        <section class="body-med">
+            <div class="prodest">
+                <h3>Productos Destacados</h3>
+            </div>
+                <article class="carousel">    
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                            <img src="./media/products/Carrusel/1747594214999.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="./media/products/Carrusel/1747594237966.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="./media/products/Carrusel/1747594324571.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="./media/products/Carrusel/1747594458654.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="./media/products/Carrusel/1747594579075.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                            <img src="./media/products/Carrusel/1747594671282.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </article>
+            <div class="products-grip">
+                <div class="products">
+                    <img src="./media/products/IMG_4059.png" alt="Producto 1">
+                    <p>Vela Falcon</p>
+                </div>
+                <div class="products">
+                    <img src="./media/products/IMG_4180.png" alt="Producto 2">
+                    <p>Vela Oso Rosa</p>
+                </div>
+                <div class="products">
+                    <img src="./media/products/IMG_4201.png" alt="Producto 3">
+                    <p>Vela Ostra</p>
+                </div>
+            </div>
+        </section> 
+        <section>
+            <div class="seccion-infe">
+                <article class="img-products">
+                    <div class="subtitle-inf">
+                        <h3>Instagram</h3>
+                    </div>
+                    <div class="instagram-grid">  
+                        <div class="inst-body">
+                            <img src="./media/products/1.webp" alt="Instagram post 1">
+                        </div>
+                        <div class="inst-body">
+                            <video src="./media/products/2.mp4" controls></video>
+                        </div>
+                        <div class="inst-body">
+                            <img src="./media/products/3.png" alt="Instagram post 3">
+                        </div>
+                        <div class="inst-body">
+                            <img src="./media/products/4.jpg" alt="Instagram post 4">
+                        </div>
+                        <div class="inst-body">
+                            <img src="./media/products/5.jpg" alt="Instagram post 5">
+                        </div>
+                        <div class="inst-body">
+                            <img src="./media/products/6.jpg" alt="Instagram post 6">
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="contenedor2">
+                        <div class="subtitle-inf margen">
+                            <h3>Testimonios</h3>
+                        </div>
+                        <div class="contenedor2 products-grip">
+                            <img src="./media/products/made-in-china.webp" class="test-img" alt="Testimonio">
+                            <div class="text-test">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias optio repudiandae dolor velit? Quibusdam qui, obcaecati ex debitis hic doloribus culpa asperiores tempore repellendus, eos dolores? Cumque natus ipsum incidunt!</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="pie-pagina">
+        <section>
+            <article>
+                <br>
+                <form action="/submit" method="POST">
+                    <label for="email" class="pie-pagina">Dejanos tu email para más novedades</label><br>
+                    <input type="email" id="email" name="email" placeholder="Escribí tu email" required>
+                    <button type="submit">Enviar</button>
+                </form>
+            </article>
+        </section>
+        <section>
+            <p>Siguenos en nuestras redes sociales</p>
+            <div class="icons">
+                <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
+                    <img src="./media/icons/Instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
+                    <img src="./media/icons/Facebook.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
+                    <img src="./media/icons/Whatsapp.png" alt="Whatsapp">
+                </a>
+            </div>
+        </section>
+        <section class="pie-pagina">
+            <p>© 2025 Isavelita. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const menuNav = document.getElementById('menu-nav');
+        hamburgerBtn.addEventListener('click', function() {
+            menuNav.classList.toggle('open');
+            this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
+        });
+        // Cerrar menú al hacer click fuera en mobile
+        document.addEventListener('click', function(e) {
+            if (!menuNav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+                menuNav.classList.remove('open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+    crossorigin="anonymous">
+</script>
+</body>
+</html>

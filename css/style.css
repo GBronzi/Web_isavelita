@@ -1,0 +1,547 @@
+/* Reset y estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Fondos de secciones */
+.body-med {
+    background-color: #F3EDE4;
+    padding-bottom: 10px;
+}
+
+.body-infe {
+    background-color: #FEFBF8;
+}
+
+/* Tipografía */
+@font-face {
+    font-family: 'TrajanPro3Regular';
+    src: url('../media/font/TrajanPro3Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'TrajanPro3Regular';
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 1px 1px 4px #383737c4;
+} 
+
+h3, h4 {
+    font-family: 'TrajanPro3Regular';
+    color: #000000;
+    text-shadow: 1px 1px 4px #383737c4;
+}
+
+/*  Header y navegación  */
+header {
+    position: relative; 
+    width: 100%;
+    height: 500px;
+    background-image: url('../media/img/Wallpaper.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-titulo {
+    font-family: 'TrajanPro3Regular';
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 1px 1px 4px #383737c4;
+    margin-left: 20px;
+}
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.logo {
+    height: 250px;
+    max-width: 100%;
+    object-fit: contain;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    margin: 0;
+}
+
+.enlaces-index {
+    display: flex;
+    align-items: start;
+    margin-top: 10px;
+    margin-right: 20px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.enlaces {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-right: 20px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/* Ajuste para páginas internas */
+.pages header {
+    height: 90px;
+    background-image: url('../media/img/Wallpapernav.png');
+    opacity: 0.9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.pages .logo-container {
+    margin-top: 0;
+    width: auto;
+}
+
+.pages .logo {
+    height: 90px;
+}
+
+.logo-acerca {
+    width: 40%;
+    max-width: 300px;
+    min-width: 150px;
+    height: auto !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* Navegación */
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; 
+}
+
+li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+li a {
+    display: block;
+    font-family: 'TrajanPro3Regular';
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px #00000099;
+    transition: color 0.3s ease;
+    padding: 5px 10px; 
+}
+
+
+.enlaces-index a:hover {
+    color: #4f181a;
+}
+
+.enlaces a:hover {
+    color: #4f181a;
+}
+
+/* Sección de productos */
+.prodest {
+    text-align: center;
+    padding: 10px;
+}
+
+.products-grip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+.products {
+    background-color: #D9BEA7;
+    border: 2px solid #000000;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: 'TrajanPro3Regular';
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    width: 250px;
+}
+
+.products img {
+    border: 1.5px solid #000000;
+    border-radius: 5px;
+    width: 97%;
+    height: auto;
+    object-fit: cover;
+    margin: -2px;
+    margin-top: 3px;
+}
+
+/* Sección Instagram */
+.subtitle-inf {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Estilos comunes para imágenes y videos */
+.instagram-grid img, 
+.instagram-grid video,
+.inst-body img, 
+.inst-body video {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.inst-body img, 
+.inst-body video {
+    width: 150px;
+    height: 150px;
+}
+
+.instagram-grid img, 
+.instagram-grid video {
+    width: 100%;
+    height: 150px;
+}
+
+/* Sección inferior y testimonios */
+.seccion-infe {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contenedor2 {
+    max-width: 550px;
+    background-color: #fffaf5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+.test-img {
+    margin-top: -10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.text-test {
+    margin-right: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 500;
+    width: 300px;
+}
+
+.contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.margen {
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+/* Footer */
+.pie-pagina {
+    margin-top: 20px;
+    font-family: 'TrajanPro3Regular';
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icons img {
+    display: inline;
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+}
+
+button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Botón hamburguesa oculto por defecto */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px auto;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+/* Responsive: mostrar hamburguesa y ocultar menú */
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex;
+
+    }
+    .enlaces-index {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 10px;
+        left: 10px;
+        background: #F3EDE4;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+        flex-direction: column;
+        width: 150px;
+        border-radius: 12px;
+        z-index: 2000;
+        margin: 0;
+        padding: 18px 0 18px 0;
+        animation: fadeInMenu 0.2s;
+    }
+    .enlaces-index.open {
+        display: flex;
+    }
+    .enlaces-index ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .enlaces-index li {
+        margin: 14px 0;
+        text-align: center;
+        padding-right: 0;
+        width: 100%;
+    }
+    .enlaces-index a {
+        color: #222 !important;
+        background: transparent;
+        transition: color 0.2s, background 0.2s;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .enlaces-index a:hover {
+        color: #4f181a !important;
+        background: #c7b490;
+        border-radius: 6px;
+    }
+    .carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+        width: 90vw;
+        max-width: 354px;
+        height: auto;
+    }
+}
+
+@keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .products-grip {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 600px;
+    }
+    
+    .products {
+        width: 100%;
+    }
+
+    .formulario-contacto {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grip {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+    }
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.campo-formulario {
+    margin-bottom: 25px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.campo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'TrajanPro3Regular', serif;
+}
+
+.campo-formulario input[type="text"],
+.campo-formulario input[type="email"],
+.campo-formulario input[type="tel"],
+.campo-formulario select,
+.campo-formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+    border-color: #b88e8e;
+    outline: none;
+}
+
+.campo-formulario.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.campo-formulario.checkbox input {
+    margin-right: 10px;
+    width: auto;
+}
+
+.campo-formulario.checkbox label {
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+.botones-formulario {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.boton-primario,
+.boton-secundario {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-primario {
+    background-color: #b88e8e;
+    color: white;
+    flex-grow: 2;
+}
+
+.boton-secundario {
+    background-color: #f0f0f0;
+    color: #333;
+    flex-grow: 1;
+}
+
+.boton-primario:hover {
+    background-color: #a57878;
+}
+
+.boton-secundario:hover {
+    background-color: #e0e0e0;
+}
+
+@media (min-width: 901px) {
+    .carousel {
+        display: none !important;
+    }
+}
