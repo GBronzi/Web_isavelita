@@ -45,7 +45,7 @@ Isavelita/
 ## Tecnologías utilizadas
 - HTML5 semántico
 - CSS3 (Flexbox, Grid, Media Queries)
-- Bootstrap 5 (solo para el carrusel)
+- Bootstrap 5 
 
 ## Buenas prácticas
 - Código tabulado y comentado
@@ -55,8 +55,6 @@ Isavelita/
 - Sin overflow horizontal
 
 ## Autoría
-Desarrollado por Isavelita (2025).
+Desarrollado por Mauricio Bronzi (2025).
 
 ---
-
-¿Dudas o sugerencias? Escribe a través del formulario de contacto del sitio o por Instagram.
