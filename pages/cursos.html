@@ -12,7 +12,7 @@
             <div class="logo-container">
                 <h1 class="logo-titulo">Isavelita</h1>
             </div>
-            <nav>
+            <nav class="menu">
                 <button class="hamburger" id="hamburger-btn-cursos" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-cursos">
                     <span></span>
                     <span></span>
@@ -27,23 +27,23 @@
                         <li><a href="./contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-            </nav>    
+            </nav>
         </header>
         <main class="body-med">
             <section class="prodest">
-                <article>
+                <article class="prodest-title">
                     <h1>✨ Cursos de Isavelita</h1>
                 </article>
                 <article>
-                    <h3>🌿 Curso de Velas de Soja</h3>
+                    <h3 class="prodest-title">🌿 Curso de Velas de Soja</h3>
                     <p class="contenedor">Sumérgete en el mundo aromático y relajante de las velas de soja. En este curso aprenderás desde cero cómo trabajar con cera vegetal, elegir esencias naturales, combinar colores y lograr acabados profesionales. Perfecto para quienes quieren emprender o disfrutar creando desde casa.</p>
                 </article>
                 <article>
-                    <h3>🕯️ Curso de Velas de Molde</h3>
+                    <h3 class="prodest-title">🕯️ Curso de Velas de Molde</h3>
                     <p class="contenedor">¿Te encanta el arte en formas? Este taller está diseñado para enseñarte a crear velas con cera de soja y cera de abeja usando moldes de silicona. Aprende sobre técnicas de vertido, desmolde y personalización con pigmentos y aromas. Ideal para decorar o vender.</p>
                 </article>
                 <article>
-                    <h3>🪨 Curso de Piezas en Cemento Decorativo</h3>
+                    <h3 class="prodest-title">🪨 Curso de Piezas en Cemento Decorativo</h3>
                     <p class="contenedor">Desarrolla tu creatividad con piezas únicas en cemento decorativo. En este curso aprenderás a hacer bandejas, portavelas, macetas y más. Te enseñaremos a trabajar con moldes, pigmentos, selladores y técnicas para lograr un acabado fino y moderno.</p>
                 </article>
             </section>
@@ -65,16 +65,38 @@
             </section>
         </footer>
     <script>
-        const hamburgerBtnCursos = document.getElementById('hamburger-btn-cursos');
-        const menuNavCursos = document.getElementById('menu-nav-cursos');
-        hamburgerBtnCursos.addEventListener('click', function() {
-            menuNavCursos.classList.toggle('open');
-            this.setAttribute('aria-expanded', menuNavCursos.classList.contains('open'));
-        });
-        document.addEventListener('click', function(e) {
-            if (!menuNavCursos.contains(e.target) && !hamburgerBtnCursos.contains(e.target)) {
-                menuNavCursos.classList.remove('open');
-                hamburgerBtnCursos.setAttribute('aria-expanded', 'false');
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn-cursos');
+            const menuNav = document.getElementById('menu-nav-cursos');
+
+            if (hamburgerBtn && menuNav) {
+                // Asegurarse de que el menú esté cerrado al cargar la página
+                menuNav.classList.remove('open');
+                hamburgerBtn.classList.remove('open');
+
+                // Agregar evento de clic al botón hamburguesa
+                hamburgerBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Evitar que el clic se propague
+                    e.preventDefault(); // Prevenir comportamiento por defecto
+
+                    // Toggle de las clases
+                    menuNav.classList.toggle('open');
+                    hamburgerBtn.classList.toggle('open');
+
+                    // Actualizar atributo aria-expanded
+                    this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
+                });
+
+                // Cerrar menú al hacer click fuera
+                document.addEventListener('click', function(e) {
+                    if (menuNav.classList.contains('open') &&
+                        !menuNav.contains(e.target) &&
+                        !hamburgerBtn.contains(e.target)) {
+                        menuNav.classList.remove('open');
+                        hamburgerBtn.classList.remove('open');
+                        hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
             }
         });
     </script>

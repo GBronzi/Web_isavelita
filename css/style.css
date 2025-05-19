@@ -1,18 +1,26 @@
 /* Reset y estilos base */
-body {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    max-width: 100%;
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
-    box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+    color: #333;
+    background-color: #f5efe6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 /* Fondos de secciones */
@@ -33,12 +41,13 @@ html, body {
     font-style: normal;
 }
 
+/* Estilos del header */
 h1 {
     font-family: 'TrajanPro3Regular';
     font-size: 30px;
     color: #000000;
     text-shadow: 1px 1px 4px #383737c4;
-} 
+}
 
 h3, h4 {
     font-family: 'TrajanPro3Regular';
@@ -46,74 +55,95 @@ h3, h4 {
     text-shadow: 1px 1px 4px #383737c4;
 }
 
-/*  Header y navegación  */
+/* Header y navegación */
 header {
-    position: relative; 
-    width: 100%;
-    height: 500px;
     background-image: url('../media/img/Wallpaper.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
 }
 
-.logo-titulo {
-    font-family: 'TrajanPro3Regular';
-    font-size: 30px;
-    color: #000000;
-    text-shadow: 1px 1px 4px #383737c4;
-    margin-left: 20px;
-}
-
-.logo-container {
-    width: 100%;
+.header-container {
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    width: 100%;
 }
 
-.logo {
-    height: 250px;
-    max-width: 100%;
+.logo h1 {
+    font-family: 'TrajanPro3Regular', Bold;
+    font-size: 40px;
+    font-weight: 400;
+    color: #2d2d2d;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu ul li a {
+    padding: 5px;
+    text-decoration: none;
+    color: #2d2d2d;
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #F3EDE4;
+}
+
+/* fila superior del header */
+.header-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+/* Estilos del logo dentro del header */
+header .logo {
+    height: 45px;
+    max-width: none;
     object-fit: contain;
     margin-top: 0;
     padding-top: 0;
 }
 
-nav {
-    width: 100%;
+/* Estilos de la navegación dentro del header */
+header nav {
+    width: auto;
     display: flex;
     justify-content: flex-end;
-    padding: 10px;
+    align-items: center;
+    padding: 0;
     margin: 0;
 }
 
-.enlaces-index {
-    display: flex;
-    align-items: start;
-    margin-top: 10px;
-    margin-right: 20px;
-    width: 100%;
-    justify-content: flex-end;
-}
-
-.enlaces {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-    margin-right: 20px;
-    width: 100%;
-    justify-content: flex-end;
-}
 
 /* Ajuste para páginas internas */
 .pages header {
     height: 90px;
-    background-image: url('../media/img/Wallpapernav.png');
     opacity: 0.9;
     display: flex;
     flex-direction: row;
@@ -142,40 +172,119 @@ nav {
     margin: 0 auto 20px auto;
 }
 
-/* Navegación */
-ul {
+/* Navegación del header principal */
+header .enlaces-index ul {
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap; 
+    flex-wrap: nowrap;
 }
 
-li {
-    margin-left: 5px;
-    margin-right: 5px;
+header .enlaces-index li {
+    margin-left: 20px;
+    margin-right: 0;
+}
+header .enlaces-index li:first-child {
+    margin-left: 0;
 }
 
-li a {
+header .enlaces-index li a {
     display: block;
-    font-family: 'TrajanPro3Regular';
     text-decoration: none;
-    color: #fff;
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-shadow: 1px 1px 4px #00000099;
+    color: #333333;
+    font-weight: 400;
+    text-shadow: none;
     transition: color 0.3s ease;
-    padding: 5px 10px; 
+    padding: 5px;
 }
 
-
-.enlaces-index a:hover {
-    color: #4f181a;
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    height: calc(100vh - 80px);
+    background-size: cover;
+    background-position: center right;
+    position: relative;
 }
 
-.enlaces a:hover {
-    color: #4f181a;
+.hero-content {
+    max-width: 500px;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 54px;
+    font-weight: 400;
+    color: #2d2d2d;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+}
+
+.btn-productos {
+    display: inline-block;
+    background-color: #5c2022;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.seccion-hero {
+    padding-top: 70px;
+    max-width: 48%;
+}
+
+.seccion-hero h1 {
+    font-family: 'TrajanPro3Regular', serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.5rem);
+    color: #4A2F2F;
+    text-shadow: none;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.seccion-hero p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+    color: #5c5c5c;
+    line-height: 1.65;
+    margin-bottom: 35px;
+}
+
+.seccion-hero button {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #BF8C6F;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0;
+    text-transform: none;
+}
+
+.seccion-hero button:hover {
+    background-color: #a9795c;
 }
 
 /* Sección de productos */
@@ -194,6 +303,10 @@ li a {
     padding: 30px 0;
 }
 
+.products-container {
+    margin: 0 auto;
+}
+
 .products {
     background-color: #D9BEA7;
     border: 2px solid #000000;
@@ -203,7 +316,16 @@ li a {
     font-weight: bold;
     text-align: center;
     font-size: 15px;
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.products:hover {
+    transform: translateY(-5px);
 }
 
 .products img {
@@ -212,8 +334,71 @@ li a {
     width: 97%;
     height: auto;
     object-fit: cover;
-    margin: -2px;
+    margin: 4px;
     margin-top: 3px;
+}
+
+/* Estilos para títulos de secciones */
+.prodest-title {
+    color: #4A2F2F;
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    font-family: 'TrajanPro3Regular';
+}
+
+.prodest-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: #D9BEA7;
+}
+
+/* Estilos para la navegación de categorías */
+.category-nav {
+    margin-bottom: 30px;
+}
+
+.nav-pills .nav-link {
+    color: #4A2F2F;
+    background-color: transparent;
+    border: 1px solid #D9BEA7;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: rgba(217, 190, 167, 0.2);
+}
+
+.nav-pills .nav-link.active {
+    background-color: #D9BEA7;
+    color: #4A2F2F;
+    font-weight: bold;
+}
+
+/* Estilos para la descripción de categorías */
+.category-description {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Estilos para los separadores de sección */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(217, 190, 167, 0.75), rgba(0, 0, 0, 0));
+    margin: 40px 0;
 }
 
 /* Sección Instagram */
@@ -231,23 +416,22 @@ li a {
     margin: auto;
 }
 
-/* Estilos comunes para imágenes y videos */
-.instagram-grid img, 
+.instagram-grid img,
 .instagram-grid video,
-.inst-body img, 
+.inst-body img,
 .inst-body video {
     border: 1px solid #000000;
     border-radius: 5px;
     object-fit: cover;
 }
 
-.inst-body img, 
+.inst-body img,
 .inst-body video {
     width: 150px;
     height: 150px;
 }
 
-.instagram-grid img, 
+.instagram-grid img,
 .instagram-grid video {
     width: 100%;
     height: 150px;
@@ -300,12 +484,13 @@ li a {
 }
 
 .margen {
-    margin-top: -20px;
+    margin-top: 5px;
     margin-left: 20px;
 }
 
 /* Footer */
 .pie-pagina {
+    background-color: #fdfdfd;
     margin-top: 20px;
     font-family: 'TrajanPro3Regular';
     font-size: 15px;
@@ -320,122 +505,44 @@ li a {
     margin: 5px;
 }
 
+/* Estilo general de botón */
 button {
     margin-left: 10px;
     margin-right: 10px;
 }
 
-/* Botón hamburguesa oculto por defecto */
+/* Estilos para el botón hamburguesa */
 .hamburger {
     display: none;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     background: none;
     border: none;
     cursor: pointer;
     z-index: 1001;
+    position: relative;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.hamburger:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .hamburger span {
     display: block;
-    width: 30px;
-    height: 4px;
-    margin: 5px auto;
-    background: #000;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-
-/* Responsive: mostrar hamburguesa y ocultar menú */
-@media (max-width: 900px) {
-    .hamburger {
-        display: flex;
-
-    }
-    .enlaces-index {
-        display: none;
-        position: fixed;
-        top: 60px;
-        right: 10px;
-        left: 10px;
-        background: #F3EDE4;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-        flex-direction: column;
-        width: 150px;
-        border-radius: 12px;
-        z-index: 2000;
-        margin: 0;
-        padding: 18px 0 18px 0;
-        animation: fadeInMenu 0.2s;
-    }
-    .enlaces-index.open {
-        display: flex;
-    }
-    .enlaces-index ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-    }
-    .enlaces-index li {
-        margin: 14px 0;
-        text-align: center;
-        padding-right: 0;
-        width: 100%;
-    }
-    .enlaces-index a {
-        color: #222 !important;
-        background: transparent;
-        transition: color 0.2s, background 0.2s;
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-    .enlaces-index a:hover {
-        color: #4f181a !important;
-        background: #c7b490;
-        border-radius: 6px;
-    }
-    .carousel {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 20px auto;
-        width: 90vw;
-        max-width: 354px;
-        height: auto;
-    }
-}
-
-@keyframes fadeInMenu {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 768px) {
-    .products-grip {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 600px;
-    }
-    
-    .products {
-        width: 100%;
-    }
-
-    .formulario-contacto {
-        width: 95%;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .products-grip {
-        grid-template-columns: 1fr;
-        max-width: 300px;
-    }
+    width: 24px;
+    height: 2px;
+    margin: 4px auto;
+    background: #333;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
 /* Formulario de contacto */
@@ -540,8 +647,511 @@ button {
     background-color: #e0e0e0;
 }
 
-@media (min-width: 901px) {
+/* ==================== MEDIA QUERIES REORGANIZADOS ==================== */
+
+/* ===== 1. MOBILE (hasta 425px) ===== */
+@media (max-width: 426px) {
+    /* Estilos generales para móvil */
+    header {
+        background-position: center center;
+        background-size: cover;
+        background-attachment: scroll;
+        min-height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        right: 0;
+        overflow-x: hidden;
+    }
+
+    .header-container {
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .logo {
+        margin-bottom: 0;
+        text-align: left;
+        margin-right: auto;
+        position: relative;
+        z-index: 1000;
+    }
+
+    header .logo h1 {
+        text-align: left;
+        font-size: 24px;
+        margin-left: 5px;
+    }
+
+    .menu {
+        margin-left: auto;
+    }
+
+    /* Botón hamburguesa */
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        z-index: 1001;
+    }
+
+    /* Menú móvil */
+    .menu ul {
+        display: none;
+    }
+
+    .enlaces-index {
+        display: none !important;
+        position: fixed;
+        top: 60px;
+        right: 15px;
+        background-color: white;
+        width: 200px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        padding: 10px;
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    .enlaces-index::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: 15px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+    }
+
+    .enlaces-index.open {
+        display: block !important;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .enlaces-index ul {
+        display: none !important;
+    }
+
+    .enlaces-index.open ul {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .enlaces-index ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .enlaces-index ul li:last-child {
+        border-bottom: none;
+    }
+
+    .enlaces-index ul li a {
+        font-size: 16px;
+        padding: 8px 10px;
+        display: block;
+        color: #333;
+        transition: all 0.2s ease;
+    }
+
+    .enlaces-index ul li a:hover {
+        background-color: #f5efe6;
+        color: #b78d6b;
+    }
+
+    /* Animación del botón hamburguesa */
+    .hamburger.open {
+        background-color: #b78d6b;
+    }
+
+    .hamburger.open span {
+        background-color: white;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    /* Hero section */
+    .hero-section {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .seccion-hero {
+        max-width: 100%;
+        padding-top: 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .seccion-hero h1 {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    /* Productos */
+    .products-grip {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .products {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+    }
+
+    /* Instagram */
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 8px;
+        max-width: 350px;
+    }
+
+    .inst-body img,
+    .inst-body video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    /* Formulario */
+    .formulario-contacto {
+        width: 95%;
+        padding: 20px;
+    }
+
+    /* Páginas internas */
+    .pages header {
+        height: 90px;
+        min-height: auto;
+    }
+
+    .pages .logo-container {
+        margin-top: 0;
+        width: auto;
+    }
+
+    .pages .logo {
+        height: 70px;
+    }
+
+    .pages .enlaces-index {
+        display: none !important;
+        position: fixed;
+        top: 60px;
+        right: 15px;
+        background-color: white;
+        width: 200px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        padding: 10px;
+    }
+
+    .pages .enlaces-index.open {
+        display: block !important;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Mostrar carrusel en móvil */
+    .carousel {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+        padding: 0 10px;
+    }
+
+    .carousel-inner {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* ===== 2. TABLET (desde 426px a 1023px) ===== */
+@media (min-width: 426px) and (max-width: 1023px) {
+    /* Estilos generales para tablet */
+    header {
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+    }
+
+    .header-container {
+        padding: 15px 30px;
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 1001;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .enlaces-index {
+        display: none !important;
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        background-color: white;
+        width: 220px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        z-index: 1000;
+        padding: 10px;
+        transition: all 0.3s ease;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    .enlaces-index::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: 15px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+    }
+
+    .enlaces-index.open {
+        display: block !important;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .enlaces-index ul {
+        display: none !important;
+    }
+
+    .enlaces-index.open ul {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .enlaces-index ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .enlaces-index ul li:last-child {
+        border-bottom: none;
+    }
+
+    .enlaces-index ul li a {
+        font-size: 16px;
+        padding: 8px 10px;
+        display: block;
+        color: #333;
+        transition: all 0.2s ease;
+    }
+
+    .enlaces-index ul li a:hover {
+        background-color: #f5efe6;
+        color: #b78d6b;
+    }
+
+    .hamburger.open {
+        background-color: #b78d6b;
+    }
+
+    .hamburger.open span {
+        background-color: white;
+    }
+
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+
+    /* Hero section */
+    .hero-section {
+        padding: 0 50px;
+    }
+
+    .hero-content h2 {
+        font-size: 54px;
+    }
+
+    /* Productos */
+    .products-grip {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Ocultar carrusel en desktop */
     .carousel {
         display: none !important;
     }
+
+    /* Páginas internas */
+    .pages header {
+        height: 90px;
+        min-height: auto;
+    }
+
+    .pages .logo-container {
+        margin-top: 0;
+        width: auto;
+    }
+
+    .pages .logo {
+        height: 70px;
+    }
+
+    .pages .enlaces-index {
+        display: none !important;
+    }
+
+    .pages .enlaces-index.open {
+        display: block !important;
+    }
 }
+
+/* ===== 3. DESKTOP (desde 1024px en adelante) ===== */
+@media (min-width: 1024px) {
+    /* Estilos generales para desktop */
+    header {
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .header-container {
+        padding: 20px 50px;
+    }
+
+    /* Menú desktop */
+    .hamburger {
+        display: none;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .menu ul li {
+        margin: 0 15px;
+    }
+
+    .enlaces-index {
+        display: flex !important;
+    }
+
+    .enlaces-index ul {
+        display: flex !important;
+    }
+
+    /* Hero section */
+    .hero-section {
+        padding: 0 50px;
+    }
+
+    .hero-content h2 {
+        font-size: 54px;
+    }
+
+    /* Productos */
+    .products-grip {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Ocultar carrusel en desktop */
+    .carousel {
+        display: none !important;
+    }
+
+    /* Páginas internas */
+    .pages header {
+        height: 90px;
+        min-height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .pages .logo-container {
+        margin-top: 0;
+        width: auto;
+    }
+
+    .pages .logo {
+        height: 90px;
+    }
+}
+

@@ -13,7 +13,7 @@
         <div class="logo-container">
             <h1 class="logo-titulo">Isavelita</h1>
         </div>
-        <nav>
+        <nav class="menu">
             <button class="hamburger" id="hamburger-btn-contacto" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-contacto">
                 <span></span>
                 <span></span>
@@ -28,7 +28,7 @@
                     <li><a href="./acerca.html">Acerca</a></li>
                 </ul>
             </div>
-        </nav>    
+        </nav>
     </header>
     <main class="body-med">
         <section class="prodest">
@@ -41,17 +41,17 @@
                     <label for="nombre">Nombre completo*</label>
                     <input type="text" name="nombre" id="nombre" required placeholder="Ingresa tu nombre">
                 </div>
-                
+
                 <div class="campo-formulario">
                     <label for="email">Email*</label>
                     <input type="email" name="email" id="email" required placeholder="tu@email.com">
                 </div>
-                
+
                 <div class="campo-formulario">
                     <label for="telefono">Teléfono</label>
                     <input type="tel" name="telefono" id="telefono" placeholder="Tu número de teléfono (opcional)">
                 </div>
-                
+
                 <div class="campo-formulario">
                     <label for="asunto">Asunto*</label>
                     <select name="asunto" id="asunto" required>
@@ -63,17 +63,17 @@
                         <option value="otro">Otro</option>
                     </select>
                 </div>
-                
+
                 <div class="campo-formulario">
                     <label for="mensaje">Mensaje*</label>
                     <textarea name="mensaje" id="mensaje" cols="30" rows="8" required placeholder="Escribe tu mensaje aquí..."></textarea>
                 </div>
-                
+
                 <div class="campo-formulario checkbox">
                     <input type="checkbox" name="newsletter" id="newsletter">
                     <label for="newsletter">Quiero recibir novedades y promociones por email</label>
                 </div>
-                
+
                 <div class="botones-formulario">
                     <button type="reset" class="boton-secundario">Limpiar</button>
                     <button type="submit" class="boton-primario">Enviar mensaje</button>
@@ -98,12 +98,40 @@
         </section>
     </footer>
     <script>
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const menuNav = document.getElementById('menu-nav');
-        hamburgerBtn.addEventListener('click', function() {
-            menuNav.classList.toggle('open');
-            this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn-contacto');
+            const menuNav = document.getElementById('menu-nav-contacto');
+
+            if (hamburgerBtn && menuNav) {
+                // Asegurarse de que el menú esté cerrado al cargar la página
+                menuNav.classList.remove('open');
+                hamburgerBtn.classList.remove('open');
+
+                // Agregar evento de clic al botón hamburguesa
+                hamburgerBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Evitar que el clic se propague
+                    e.preventDefault(); // Prevenir comportamiento por defecto
+
+                    // Toggle de las clases
+                    menuNav.classList.toggle('open');
+                    hamburgerBtn.classList.toggle('open');
+
+                    // Actualizar atributo aria-expanded
+                    this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
+                });
+
+                // Cerrar menú al hacer click fuera
+                document.addEventListener('click', function(e) {
+                    if (menuNav.classList.contains('open') &&
+                        !menuNav.contains(e.target) &&
+                        !hamburgerBtn.contains(e.target)) {
+                        menuNav.classList.remove('open');
+                        hamburgerBtn.classList.remove('open');
+                        hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
         });
     </script>
-    </body>
+</body>
 </html>

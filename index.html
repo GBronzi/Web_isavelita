@@ -10,9 +10,11 @@
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img class="logo" src="./media/img/Logo.png" alt="logo de Isavelita">
-            <nav>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Isavelita</h1>
+            </div>
+            <nav class="menu">
                 <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav">
                     <span></span>
                     <span></span>
@@ -28,68 +30,90 @@
                     </ul>
                 </div>
             </nav>
-        </div>    
+        </div>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2>Encendé tu esencia.<br>Decorá tu alma<br>con Isavelita.</h2>
+                <p>Velas aromaticas de soja y bandejas<br>artesanales para transformar tus espacios</p>
+                <a class="btn btn-danger btn-productos" href="./pages/tienda.html" role="button">Ver productos</a>
+            </div>
+        </div>
     </header>
     <main>
         <section class="body-med">
-            <div class="prodest">
-                <h3>Productos Destacados</h3>
-            </div>
-                <article class="carousel">    
-                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                            <img src="./media/products/Carrusel/1747594214999.jpg" class="d-block w-100" alt="...">
+            <div class="container">
+                <div class="row text-center mb-4">
+                    <div class="col-12">
+                        <h3 class="prodest-title">Productos Destacados</h3>
+                    </div>
+                </div>
+                <!-- Carrusel solo visible en móvil -->
+                <div class="row d-block d-md-none">
+                    <div class="col-12">
+                        <article class="carousel">
+                            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="./media/products/Carrusel/carousel-02.png" class="d-block w-100" alt="Vela largas">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="./media/products/Carrusel/carousel-03.png" class="d-block w-100" alt="Vela Falcon">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="./media/products/Carrusel/carousel-04.png" class="d-block w-100" alt="Velas Torneadas">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="./media/products/Carrusel/carousel-05.png" class="d-block w-100" alt="Bombones aromaticos">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="./media/products/Carrusel/carousel-06.png" class="d-block w-100" alt="Margaritas">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="./media/products/Carrusel/carousel-07.png" class="d-block w-100" alt="Florero de rosas">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
-                            <div class="carousel-item">
-                            <img src="./media/products/Carrusel/1747594237966.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                            <img src="./media/products/Carrusel/1747594324571.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                            <img src="./media/products/Carrusel/1747594458654.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                            <img src="./media/products/Carrusel/1747594579075.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                            <img src="./media/products/Carrusel/1747594671282.jpg" class="d-block w-100" alt="...">
-                            </div>
+                        </article>
+                    </div>
+                </div>
+                <!-- Productos destacados con grid de Bootstrap -->
+                <div class="row justify-content-center g-4 products-container">
+                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                        <div class="products">
+                            <img src="./media/products/IMG_4059.png" alt="Producto 1" class="img-fluid">
+                            <p>Vela Falcon</p>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </article>
-            <div class="products-grip">
-                <div class="products">
-                    <img src="./media/products/IMG_4059.png" alt="Producto 1">
-                    <p>Vela Falcon</p>
-                </div>
-                <div class="products">
-                    <img src="./media/products/IMG_4180.png" alt="Producto 2">
-                    <p>Vela Oso Rosa</p>
-                </div>
-                <div class="products">
-                    <img src="./media/products/IMG_4201.png" alt="Producto 3">
-                    <p>Vela Ostra</p>
+                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                        <div class="products">
+                            <img src="./media/products/IMG_4180.png" alt="Producto 2" class="img-fluid">
+                            <p>Vela Oso Rosa</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                        <div class="products">
+                            <img src="./media/products/IMG_4201.png" alt="Producto 3" class="img-fluid">
+                            <p>Vela Ostra</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section> 
+        </section>
         <section>
             <div class="seccion-infe">
                 <article class="img-products">
                     <div class="subtitle-inf">
                         <h3>Instagram</h3>
                     </div>
-                    <div class="instagram-grid">  
+                    <div class="instagram-grid">
                         <div class="inst-body">
                             <img src="./media/products/1.webp" alt="Instagram post 1">
                         </div>
@@ -118,7 +142,7 @@
                         <div class="contenedor2 products-grip">
                             <img src="./media/products/made-in-china.webp" class="test-img" alt="Testimonio">
                             <div class="text-test">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias optio repudiandae dolor velit? Quibusdam qui, obcaecati ex debitis hic doloribus culpa asperiores tempore repellendus, eos dolores? Cumque natus ipsum incidunt!</p>
+                                <p>Las velas de Isavelita tienen un aroma delicioso y duradero. Se nota que están hechas con cuidado y muy buena calidad. Definitivamente volveré a comprar. -Carolina G.</p>
                             </div>
                         </div>
                     </div>
@@ -133,22 +157,19 @@
                 <form action="/submit" method="POST">
                     <label for="email" class="pie-pagina">Dejanos tu email para más novedades</label><br>
                     <input type="email" id="email" name="email" placeholder="Escribí tu email" required>
-                    <button type="submit">Enviar</button>
+                    <button type="button" class="btn btn-light">Enviar</button>
                 </form>
             </article>
         </section>
         <section>
             <p>Siguenos en nuestras redes sociales</p>
             <div class="icons">
-                <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
-                    <img src="./media/icons/Instagram.png" alt="Instagram">
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
-                    <img src="./media/icons/Facebook.png" alt="Facebook">
-                </a>
-                <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
-                    <img src="./media/icons/Whatsapp.png" alt="Whatsapp">
-                </a>
+                    <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
+                        <img src="./media/icons/instagram.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
+                        <img src="./media/icons/facebook.png" alt="Facebook"></a>
+                    <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
+                        <img src="./media/icons/whatsapp.png" alt="Whatsapp"></a>
             </div>
         </section>
         <section class="pie-pagina">
@@ -156,22 +177,43 @@
         </section>
     </footer>
     <script>
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const menuNav = document.getElementById('menu-nav');
-        hamburgerBtn.addEventListener('click', function() {
-            menuNav.classList.toggle('open');
-            this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
-        });
-        // Cerrar menú al hacer click fuera en mobile
-        document.addEventListener('click', function(e) {
-            if (!menuNav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const menuNav = document.getElementById('menu-nav');
+
+            if (hamburgerBtn && menuNav) {
+                // Asegurarse de que el menú esté cerrado al cargar la página
                 menuNav.classList.remove('open');
-                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                hamburgerBtn.classList.remove('open');
+
+                // Agregar evento de clic al botón hamburguesa
+                hamburgerBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Evitar que el clic se propague
+                    e.preventDefault(); // Prevenir comportamiento por defecto
+
+                    // Toggle de las clases
+                    menuNav.classList.toggle('open');
+                    hamburgerBtn.classList.toggle('open');
+
+                    // Actualizar atributo aria-expanded
+                    this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
+                });
+
+                // Cerrar menú al hacer click fuera
+                document.addEventListener('click', function(e) {
+                    if (menuNav.classList.contains('open') &&
+                        !menuNav.contains(e.target) &&
+                        !hamburgerBtn.contains(e.target)) {
+                        menuNav.classList.remove('open');
+                        hamburgerBtn.classList.remove('open');
+                        hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
             }
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous">
 </script>
 </body>

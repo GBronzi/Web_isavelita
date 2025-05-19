@@ -12,7 +12,7 @@
             <div class="logo-container">
                 <h1 class="logo-titulo">Isavelita</h1>
             </div>
-            <nav>
+            <nav class="menu">
                 <button class="hamburger" id="hamburger-btn-mayorista" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-mayorista">
                     <span></span>
                     <span></span>
@@ -27,7 +27,7 @@
                         <li><a href="./contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-            </nav>    
+            </nav>
         </header>
         <main class="body-med">
             <section>
@@ -93,16 +93,38 @@
             </section>
         </footer>
         <script>
-            const hamburgerBtnMayorista = document.getElementById('hamburger-btn-mayorista');
-            const menuNavMayorista = document.getElementById('menu-nav-mayorista');
-            hamburgerBtnMayorista.addEventListener('click', function() {
-                menuNavMayorista.classList.toggle('open');
-                this.setAttribute('aria-expanded', menuNavMayorista.classList.contains('open'));
-            });
-            document.addEventListener('click', function(e) {
-                if (!menuNavMayorista.contains(e.target) && !hamburgerBtnMayorista.contains(e.target)) {
-                    menuNavMayorista.classList.remove('open');
-                    hamburgerBtnMayorista.setAttribute('aria-expanded', 'false');
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburgerBtn = document.getElementById('hamburger-btn-mayorista');
+                const menuNav = document.getElementById('menu-nav-mayorista');
+
+                if (hamburgerBtn && menuNav) {
+                    // Asegurarse de que el menú esté cerrado al cargar la página
+                    menuNav.classList.remove('open');
+                    hamburgerBtn.classList.remove('open');
+
+                    // Agregar evento de clic al botón hamburguesa
+                    hamburgerBtn.addEventListener('click', function(e) {
+                        e.stopPropagation(); // Evitar que el clic se propague
+                        e.preventDefault(); // Prevenir comportamiento por defecto
+
+                        // Toggle de las clases
+                        menuNav.classList.toggle('open');
+                        hamburgerBtn.classList.toggle('open');
+
+                        // Actualizar atributo aria-expanded
+                        this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
+                    });
+
+                    // Cerrar menú al hacer click fuera
+                    document.addEventListener('click', function(e) {
+                        if (menuNav.classList.contains('open') &&
+                            !menuNav.contains(e.target) &&
+                            !hamburgerBtn.contains(e.target)) {
+                            menuNav.classList.remove('open');
+                            hamburgerBtn.classList.remove('open');
+                            hamburgerBtn.setAttribute('aria-expanded', 'false');
+                        }
+                    });
                 }
             });
         </script>

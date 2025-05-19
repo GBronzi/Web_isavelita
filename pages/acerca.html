@@ -12,7 +12,7 @@
             <div class="logo-container">
                 <h1 class="logo-titulo">Isavelita</h1>
             </div>
-            <nav>
+            <nav class="menu">
                 <button class="hamburger" id="hamburger-btn-acerca" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-acerca">
                     <span></span>
                     <span></span>
@@ -27,7 +27,7 @@
                         <li><a href="./contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-            </nav>    
+            </nav>
         </header>
         <main class="body-med">
             <section class="prodest">
@@ -71,16 +71,38 @@
             </section>
         </footer>
     <script>
-        const hamburgerBtnAcerca = document.getElementById('hamburger-btn-acerca');
-        const menuNavAcerca = document.getElementById('menu-nav-acerca');
-        hamburgerBtnAcerca.addEventListener('click', function() {
-            menuNavAcerca.classList.toggle('open');
-            this.setAttribute('aria-expanded', menuNavAcerca.classList.contains('open'));
-        });
-        document.addEventListener('click', function(e) {
-            if (!menuNavAcerca.contains(e.target) && !hamburgerBtnAcerca.contains(e.target)) {
-                menuNavAcerca.classList.remove('open');
-                hamburgerBtnAcerca.setAttribute('aria-expanded', 'false');
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburger-btn-acerca');
+            const menuNav = document.getElementById('menu-nav-acerca');
+
+            if (hamburgerBtn && menuNav) {
+                // Asegurarse de que el menú esté cerrado al cargar la página
+                menuNav.classList.remove('open');
+                hamburgerBtn.classList.remove('open');
+
+                // Agregar evento de clic al botón hamburguesa
+                hamburgerBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Evitar que el clic se propague
+                    e.preventDefault(); // Prevenir comportamiento por defecto
+
+                    // Toggle de las clases
+                    menuNav.classList.toggle('open');
+                    hamburgerBtn.classList.toggle('open');
+
+                    // Actualizar atributo aria-expanded
+                    this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
+                });
+
+                // Cerrar menú al hacer click fuera
+                document.addEventListener('click', function(e) {
+                    if (menuNav.classList.contains('open') &&
+                        !menuNav.contains(e.target) &&
+                        !hamburgerBtn.contains(e.target)) {
+                        menuNav.classList.remove('open');
+                        hamburgerBtn.classList.remove('open');
+                        hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    }
+                });
             }
         });
     </script>

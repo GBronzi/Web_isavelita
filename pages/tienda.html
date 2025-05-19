@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="icon" href="../media/img/Logo.png" type="image/png">
         <title>Productos - Isavelita</title>
@@ -12,7 +13,7 @@
             <div class="logo-container">
                 <h1 class="logo-titulo">Isavelita</h1>
             </div>
-            <nav>
+            <nav class="menu">
                 <button class="hamburger" id="hamburger-btn-tienda" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav-tienda">
                     <span></span>
                     <span></span>
@@ -27,67 +28,174 @@
                         <li><a href="./contacto.html">Contacto</a></li>
                     </ul>
                 </div>
-            </nav>    
+            </nav>
         </header>
         <main class="body-med">
-            <section>
-                <article>
-                    <div class="prodest">
-                        <h3> Velas de Soja</h3>
+            <div class="container py-4">
+                <!-- Barra de navegación de categorías -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <nav class="category-nav">
+                            <ul class="nav nav-pills justify-content-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#velas-soja">Velas de Soja</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#velas-molde">Velas de Molde</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#decoracion">Decoración</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="products-grip">
-                        <div class="products">
-                        <img src="../media/products/IMG_4059.png" alt="Vela falcon 1">
-                            <p>Vela Falcón</p>
-                        </div>
-                        <div class="products">
-                            <img src="../media/products/IMG_4035.png" alt="Vela avila">
-                            <p>Vela Ávila</p>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <div class="prodest">
-                        <h3> Velas de Molde</h3>
-                    </div>
-                    <div class="products-grip">
-                        <div class="products">
-                            <img src="../media/products/IMG_4038.png" alt="Vela arcoiris">
-                            <p>Vela Arcoíris</p>
-                        </div>
-                        <div class="products">
-                            <img src="../media/products/IMG_4039.png" alt="Vela Corazon Floreado">
-                            <p>Vela Corazón floreado</p>
-                        </div>
-                    </div>
-                </article>
-                <article>
-                    <div class="prodest">
-                        <h3> Decoración</h3>
-                    </div>
-                    <div class="products-grip">
-                        <div class="products">
-                            <img src="../media/products/IMG_4036.png" alt="Bandeja nube">
-                            <p>Bandeja Nube</p>
-                        </div>
-                        <div class="products">
-                            <img src="../media/products/IMG_4037.png" alt="Bandeja ovalada">
-                            <p>Bandeja Ovalada</p>
+                </div>
+
+                <!-- Sección Velas de Soja -->
+                <section id="velas-soja" class="mb-5">
+                    <div class="row text-center mb-4">
+                        <div class="col-12">
+                            <h3 class="prodest-title">Velas de Soja</h3>
+                            <div class="category-description">
+                                <p>Nuestras velas de soja son 100% naturales y ecológicas, con aromas duraderos y una combustión limpia.</p>
+                            </div>
                         </div>
                     </div>
-                </article>
-            </section>
+                    <div class="row justify-content-center g-4">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4059.png" alt="Vela Falcón" class="img-fluid">
+                                <p>Vela Falcón</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4035.png" alt="Vela Ávila" class="img-fluid">
+                                <p>Vela Ávila</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4073.png" alt="Vela Caramelera" class="img-fluid">
+                                <p>Vela Caramelera</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4134.png" alt="Vela Caramelera Grande" class="img-fluid">
+                                <p>Vela Caramelera Grande</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4140.png" alt="Vela Paris" class="img-fluid">
+                                <p>Vela Paris</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Separador visual -->
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="section-divider">
+                    </div>
+                </div>
+
+                <!-- Sección Velas de Molde -->
+                <section id="velas-molde" class="mb-5 pt-3">
+                    <div class="row text-center mb-4">
+                        <div class="col-12">
+                            <h3 class="prodest-title">Velas de Molde</h3>
+                            <div class="category-description">
+                                <p>Velas decorativas con diseños únicos, perfectas para regalar o decorar cualquier espacio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center g-4">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4038.png" alt="Vela Arcoíris" class="img-fluid">
+                                <p>Vela Arcoíris</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4039.png" alt="Vela Corazón Floreado" class="img-fluid">
+                                <p>Vela Corazón Floreado</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4180.png" alt="Vela Oso Rosa" class="img-fluid">
+                                <p>Vela Oso Rosa</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4201.png" alt="Vela Ostra" class="img-fluid">
+                                <p>Vela Ostra</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Separador visual -->
+                <div class="row">
+                    <div class="col-12">
+                        <hr class="section-divider">
+                    </div>
+                </div>
+
+                <!-- Sección Decoración -->
+                <section id="decoracion" class="mb-5 pt-3">
+                    <div class="row text-center mb-4">
+                        <div class="col-12">
+                            <h3 class="prodest-title">Decoración</h3>
+                            <div class="category-description">
+                                <p>Complementa tu hogar con nuestras bandejas y elementos decorativos artesanales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center g-4">
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4036.png" alt="Bandeja Nube" class="img-fluid">
+                                <p>Bandeja Nube</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_4037.png" alt="Bandeja Ovalada" class="img-fluid">
+                                <p>Bandeja Ovalada</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_5125 - copia.png" alt="Bandeja Ondulada Terrazo" class="img-fluid">
+                                <p>Bandeja Ondulada Terrazo</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="products">
+                                <img src="../media/products/IMG_5203 - copia.png" alt="Bandeja Ondulada" class="img-fluid">
+                                <p>Bandeja Ondulada</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
         <footer class="pie-pagina">
             <section>
                 <p>Siguenos en nuestras redes sociales</p>
                 <div class="icons">
                     <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
-                        <img src="../media/icons/Instagram.png" alt="Instagram"></a>
+                        <img src="../media/icons/instagram.png" alt="Instagram"></a>
                     <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
-                        <img src="../media/icons/Facebook.png" alt="Facebook"></a>
+                        <img src="../media/icons/facebook.png" alt="Facebook"></a>
                     <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
-                        <img src="../media/icons/Whatsapp.png" alt="Whatsapp"></a>
+                        <img src="../media/icons/whatsapp.png" alt="Whatsapp"></a>
                 </div>
             </section>
             <section class="pie-pagina">
@@ -95,18 +203,44 @@
             </section>
         </footer>
         <script>
-            const hamburgerBtnTienda = document.getElementById('hamburger-btn-tienda');
-            const menuNavTienda = document.getElementById('menu-nav-tienda');
-            hamburgerBtnTienda.addEventListener('click', function() {
-                menuNavTienda.classList.toggle('open');
-                this.setAttribute('aria-expanded', menuNavTienda.classList.contains('open'));
-            });
-            document.addEventListener('click', function(e) {
-                if (!menuNavTienda.contains(e.target) && !hamburgerBtnTienda.contains(e.target)) {
-                    menuNavTienda.classList.remove('open');
-                    hamburgerBtnTienda.setAttribute('aria-expanded', 'false');
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburgerBtn = document.getElementById('hamburger-btn-tienda');
+                const menuNav = document.getElementById('menu-nav-tienda');
+
+                if (hamburgerBtn && menuNav) {
+                    // Asegurarse de que el menú esté cerrado al cargar la página
+                    menuNav.classList.remove('open');
+                    hamburgerBtn.classList.remove('open');
+
+                    // Agregar evento de clic al botón hamburguesa
+                    hamburgerBtn.addEventListener('click', function(e) {
+                        e.stopPropagation(); // Evitar que el clic se propague
+                        e.preventDefault(); // Prevenir comportamiento por defecto
+
+                        // Toggle de las clases
+                        menuNav.classList.toggle('open');
+                        hamburgerBtn.classList.toggle('open');
+
+                        // Actualizar atributo aria-expanded
+                        this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
+                    });
+
+                    // Cerrar menú al hacer click fuera
+                    document.addEventListener('click', function(e) {
+                        if (menuNav.classList.contains('open') &&
+                            !menuNav.contains(e.target) &&
+                            !hamburgerBtn.contains(e.target)) {
+                            menuNav.classList.remove('open');
+                            hamburgerBtn.classList.remove('open');
+                            hamburgerBtn.setAttribute('aria-expanded', 'false');
+                        }
+                    });
                 }
             });
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous">
+    </script>
     </body>
 </html>
