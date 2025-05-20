@@ -250,6 +250,8 @@ header .enlaces-index li a {
 .seccion-hero {
     padding-top: 70px;
     max-width: 48%;
+    position: relative;
+    z-index: 1;
 }
 
 .seccion-hero h1 {
@@ -259,6 +261,8 @@ header .enlaces-index li a {
     text-shadow: none;
     line-height: 1.25;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 1; 
 }
 
 .seccion-hero p {
@@ -522,7 +526,7 @@ button {
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1001;
+    z-index: 9999;
     position: relative;
     transition: all 0.3s ease;
     border-radius: 50%;
@@ -647,7 +651,7 @@ button {
     background-color: #e0e0e0;
 }
 
-/* ==================== MEDIA QUERIES REORGANIZADOS ==================== */
+/* ==================== MEDIA QUERIES ==================== */
 
 /* ===== 1. MOBILE (hasta 425px) ===== */
 @media (max-width: 426px) {
@@ -680,13 +684,15 @@ button {
         text-align: left;
         margin-right: auto;
         position: relative;
-        z-index: 1000;
+        z-index: 1;
     }
 
     header .logo h1 {
         text-align: left;
         font-size: 24px;
         margin-left: 5px;
+        position: relative;
+        z-index: 1;
     }
 
     .menu {
@@ -697,10 +703,10 @@ button {
     .hamburger {
         display: flex;
         margin-left: auto;
-        position: absolute;
+        position: fixed; 
         right: 15px;
         top: 15px;
-        z-index: 1001;
+        z-index: 99999; 
     }
 
     /* Menú móvil */
@@ -717,7 +723,7 @@ button {
         width: 200px;
         border-radius: 12px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        z-index: 1000;
+        z-index: 9998;
         padding: 10px;
         transition: all 0.3s ease;
         opacity: 0;
@@ -771,6 +777,8 @@ button {
         display: block;
         color: #333;
         transition: all 0.2s ease;
+        position: relative;
+        z-index: 9998;
     }
 
     .enlaces-index ul li a:hover {
@@ -893,7 +901,7 @@ button {
         width: 200px;
         border-radius: 12px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        z-index: 1000;
+        z-index: 99998; 
         padding: 10px;
     }
 
@@ -938,7 +946,7 @@ button {
         position: absolute;
         right: 20px;
         top: 20px;
-        z-index: 1001;
+        z-index: 9999;
     }
 
     .menu ul {
@@ -954,7 +962,7 @@ button {
         width: 220px;
         border-radius: 12px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        z-index: 1000;
+        z-index: 9998; 
         padding: 10px;
         transition: all 0.3s ease;
         opacity: 0;
@@ -1008,6 +1016,8 @@ button {
         display: block;
         color: #333;
         transition: all 0.2s ease;
+        position: relative;
+        z-index: 9998;
     }
 
     .enlaces-index ul li a:hover {

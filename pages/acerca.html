@@ -76,24 +76,20 @@
             const menuNav = document.getElementById('menu-nav-acerca');
 
             if (hamburgerBtn && menuNav) {
-                // Asegurarse de que el menú esté cerrado al cargar la página
+            
                 menuNav.classList.remove('open');
                 hamburgerBtn.classList.remove('open');
 
-                // Agregar evento de clic al botón hamburguesa
                 hamburgerBtn.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Evitar que el clic se propague
-                    e.preventDefault(); // Prevenir comportamiento por defecto
+                    e.stopPropagation(); 
+                    e.preventDefault(); 
 
-                    // Toggle de las clases
                     menuNav.classList.toggle('open');
                     hamburgerBtn.classList.toggle('open');
 
-                    // Actualizar atributo aria-expanded
                     this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
                 });
 
-                // Cerrar menú al hacer click fuera
                 document.addEventListener('click', function(e) {
                     if (menuNav.classList.contains('open') &&
                         !menuNav.contains(e.target) &&

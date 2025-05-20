@@ -55,7 +55,7 @@
                 <section id="velas-soja" class="mb-5">
                     <div class="row text-center mb-4">
                         <div class="col-12">
-                            <h3 class="prodest-title">Velas de Soja</h3>
+                            <h3 class="prodest">Velas de Soja</h3>
                             <div class="category-description">
                                 <p>Nuestras velas de soja son 100% naturales y ecológicas, con aromas duraderos y una combustión limpia.</p>
                             </div>
@@ -208,24 +208,20 @@
                 const menuNav = document.getElementById('menu-nav-tienda');
 
                 if (hamburgerBtn && menuNav) {
-                    // Asegurarse de que el menú esté cerrado al cargar la página
+
                     menuNav.classList.remove('open');
                     hamburgerBtn.classList.remove('open');
 
-                    // Agregar evento de clic al botón hamburguesa
                     hamburgerBtn.addEventListener('click', function(e) {
-                        e.stopPropagation(); // Evitar que el clic se propague
-                        e.preventDefault(); // Prevenir comportamiento por defecto
+                        e.stopPropagation();
+                        e.preventDefault();
 
-                        // Toggle de las clases
                         menuNav.classList.toggle('open');
                         hamburgerBtn.classList.toggle('open');
 
-                        // Actualizar atributo aria-expanded
                         this.setAttribute('aria-expanded', menuNav.classList.contains('open'));
                     });
 
-                    // Cerrar menú al hacer click fuera
                     document.addEventListener('click', function(e) {
                         if (menuNav.classList.contains('open') &&
                             !menuNav.contains(e.target) &&
