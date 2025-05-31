@@ -54,22 +54,22 @@
                             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                    <img src="./media/products/Carrusel/carousel-02.png" class="d-block w-100" alt="Vela largas">
+                                        <img src="./media/products/Carrusel/carousel-02.png" class="d-block w-100" alt="Vela largas">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="./media/products/Carrusel/carousel-03.png" class="d-block w-100" alt="Vela Falcon">
+                                        <img src="./media/products/Carrusel/carousel-03.png" class="d-block w-100" alt="Vela Falcon">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="./media/products/Carrusel/carousel-04.png" class="d-block w-100" alt="Velas Torneadas">
+                                        <img src="./media/products/Carrusel/carousel-04.png" class="d-block w-100" alt="Velas Torneadas">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="./media/products/Carrusel/carousel-05.png" class="d-block w-100" alt="Bombones aromaticos">
+                                        <img src="./media/products/Carrusel/carousel-05.png" class="d-block w-100" alt="Bombones aromaticos">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="./media/products/Carrusel/carousel-06.png" class="d-block w-100" alt="Margaritas">
+                                        <img src="./media/products/Carrusel/carousel-06.png" class="d-block w-100" alt="Margaritas">
                                     </div>
                                     <div class="carousel-item">
-                                    <img src="./media/products/Carrusel/carousel-07.png" class="d-block w-100" alt="Florero de rosas">
+                                        <img src="./media/products/Carrusel/carousel-07.png" class="d-block w-100" alt="Florero de rosas">
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
@@ -164,18 +164,58 @@
         <section>
             <p>Siguenos en nuestras redes sociales</p>
             <div class="icons">
-                    <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
-                        <img src="./media/icons/instagram.png" alt="Instagram"></a>
-                    <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
-                        <img src="./media/icons/facebook.png" alt="Facebook"></a>
-                    <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
-                        <img src="./media/icons/whatsapp.png" alt="Whatsapp"></a>
+                <a href="https://www.instagram.com/isavelita_candles/" target="_blank" rel="noopener noreferrer">
+                    <img src="./media/icons/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100092580877684" target="_blank" rel="noopener noreferrer">
+                    <img src="./media/icons/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/3512395717" target="_blank" rel="noopener noreferrer">
+                    <img src="./media/icons/whatsapp.png" alt="Whatsapp">
+                </a>
             </div>
         </section>
         <section class="pie-pagina">
             <p>© 2025 Isavelita. Todos los derechos reservados.</p>
         </section>
     </footer>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="#" class="whatsapp-float" id="open-whatsapp-chat" aria-label="Abrir chat de WhatsApp">
+        <img src="./media/icons/white-whatsapp.png" alt="WhatsApp">
+    </a>
+    <!-- Ventana de chat flotante -->
+    <div class="whatsapp-chat-window" id="whatsapp-chat-window">
+        <div class="chat-header">
+            <span>Online</span>
+            <button id="close-whatsapp-chat" aria-label="Cerrar chat">&times;</button>
+        </div>
+        <div class="chat-body">
+            <div id="whatsapp-typing" style="display:none;">
+                <div style="display:flex;align-items:center;gap:7px;">
+                    <span style="display:inline-block;width:18px;height:18px;">
+                        <img src="./media/icons/white-whatsapp.png" alt="WhatsApp" style="width:100%;height:100%;">
+                    </span>
+                    <span class="typing-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </span>
+                    <span style="font-size:13px;color:#888;">escribiendo...</span>
+                </div>
+            </div>
+            <div class="chat-message" id="whatsapp-chat-message" style="display:none;">
+                <p>
+                    ¡Hola! ✨ Bienvenido a Isavelita,<br>
+                    donde la magia de la luz y los aromas se encuentran en nuestras velas 🕯️.<br><br>
+                    ¿Tienes alguna consulta sobre nuestros productos? Estoy aquí para ayudarte a encontrar la vela perfecta para ti.<br><br>
+                    ¡Escríbeme y juntos iluminemos tu espacio con calidez y armonía! 🌿
+                </p>
+            </div>
+            <a href="https://wa.me/3512395717" target="_blank" class="chat-btn">
+                <img src="./media/icons/white-whatsapp.png" alt="WhatsApp"> Ingresa al Chat
+            </a>
+        </div>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -187,7 +227,7 @@
 
                 hamburgerBtn.addEventListener('click', function(e) {
                     e.stopPropagation();
-                    e.preventDefault(); 
+                    e.preventDefault();
 
                     menuNav.classList.toggle('open');
                     hamburgerBtn.classList.toggle('open');
@@ -206,9 +246,63 @@
             }
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappBtn = document.querySelector('.whatsapp-float');
+            const chatWindow = document.getElementById('whatsapp-chat-window');
+            const openBtn = document.getElementById('open-whatsapp-chat');
+            const closeBtn = document.getElementById('close-whatsapp-chat');
+            const chatMsg = document.getElementById('whatsapp-chat-message');
+            const typingDiv = document.getElementById('whatsapp-typing');
+            let chatMsgTimeout, typingTimeout;
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    whatsappBtn.classList.add('visible');
+                } else {
+                    whatsappBtn.classList.remove('visible');
+                    chatWindow.classList.remove('active');
+                    if(chatMsg) chatMsg.style.display = 'none';
+                    if(typingDiv) typingDiv.style.display = 'none';
+                    if(chatMsgTimeout) clearTimeout(chatMsgTimeout);
+                    if(typingTimeout) clearTimeout(typingTimeout);
+                }
+            });
+
+            // Cambia el comportamiento del botón flotante para toggle
+            openBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (chatWindow.classList.contains('active')) {
+                    chatWindow.classList.remove('active');
+                    if(chatMsg) chatMsg.style.display = 'none';
+                    if(typingDiv) typingDiv.style.display = 'none';
+                    if(chatMsgTimeout) clearTimeout(chatMsgTimeout);
+                    if(typingTimeout) clearTimeout(typingTimeout);
+                } else {
+                    chatWindow.classList.add('active');
+                    if(chatMsg) chatMsg.style.display = 'none';
+                    if(typingDiv) typingDiv.style.display = 'block';
+                    if(chatMsgTimeout) clearTimeout(chatMsgTimeout);
+                    if(typingTimeout) clearTimeout(typingTimeout);
+                    typingTimeout = setTimeout(function() {
+                        if(typingDiv) typingDiv.style.display = 'none';
+                        if(chatMsg) chatMsg.style.display = 'block';
+                    }, 1200); // 1.2 segundos de "escribiendo..."
+                }
+            });
+
+            closeBtn.addEventListener('click', function() {
+                chatWindow.classList.remove('active');
+                if(chatMsg) chatMsg.style.display = 'none';
+                if(typingDiv) typingDiv.style.display = 'none';
+                if(chatMsgTimeout) clearTimeout(chatMsgTimeout);
+                if(typingTimeout) clearTimeout(typingTimeout);
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous">
-</script>
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous">
+    </script>
 </body>
 </html>
