@@ -1,0 +1,32 @@
+/* ==================== FOOTER ==================== */
+.pie-pagina {
+    background-color: #fdfdfd;
+    margin-top: 20px;
+    font-family: $fuente-secundaria;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.icons {
+    img {
+        display: inline;
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+    }
+    a {
+        outline: none !important;
+        box-shadow: none !important;
+        text-decoration: none !important;
+    }
+    a:focus,
+    a:active,
+    a:visited,
+    a:focus-visible,
+    a:focus-within {
+        outline: none !important;
+        box-shadow: none !important;
+        text-decoration: none !important;
+    }
+}

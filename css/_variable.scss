@@ -1,0 +1,39 @@
+/* ==================== VARIABLES & MIXINS ==================== */
+
+$color-principal: #4A2F2F;
+$color-secundario: #D9BEA7;
+$color-accento: #BF8C6F;
+$color-fondo-inst-test: #f0c3a9;
+$accento-oscuro: #5c2022;
+$fondo-claro: #f5efe6;
+$fondo-mas-claro: #FEFBF8;
+$fondo-medio: #F3EDE4;
+$color-texto: #2d2d2d;
+$texto-claro: #5c5c5c;
+$color-boton: #a00b0b;
+$whatsapp-color-segundario: #a03a3a;
+$whatsapp-bg-hover: #7a2323;
+$whatsapp-shadow: #00000033;
+$whatsapp-chat-shadow: #0000002e;
+$whatsapp-btn-shadow: #a03a3a14;
+$whatsapp-msg-shadow: #a03a3a0a;
+
+$fuente-principal: 'Playfair Display', serif;
+$fuente-secundaria: 'TrajanPro3Regular', serif;
+$fuente-terciaria: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@mixin transicion($propiedad: all, $duracion: 0.3s, $easing: ease) {
+    transition: $propiedad $duracion $easing;
+}
+
+@mixin flex-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid-responsive($columnas) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+

@@ -1,0 +1,279 @@
+/* ==================== ESTILOS BASE ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $fuente-principal;
+    overflow-x: hidden;
+    color: #333;
+    background-color: $fondo-claro;
+    width: 100%;
+    /* Fondos de secciones */
+    &.body-med {
+        background-color: $fondo-medio;
+        padding-bottom: 10px;
+    }
+    &.body-infe {
+        background-color: $fondo-mas-claro;
+    }
+}
+
+/* ==================== TIPOGRAFÍA ==================== */
+@font-face {
+    font-family: 'TrajanPro3Regular';
+    src: url('../media/font/TrajanPro3Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h3, h4 {
+    font-family: $fuente-secundaria;
+    color: #000000;
+    text-shadow: 1px 1px 4px #383737c4;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.prodest-title {
+    color: $color-principal;
+    font-size: 28px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    font-family: $fuente-secundaria;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 2px;
+        background-color: $color-secundario;
+    }
+}
+
+.subtitle-inf {
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+/* ==================== MENÚ HAMBURGUESA ==================== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
+    position: relative;
+    @include transicion;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        margin: 4px auto;
+        background: #333;
+        border-radius: 4px;
+        @include transicion;
+    }
+
+    /* Estado abierto */
+    &.open {
+        background-color: #b78d6b;
+
+        span {
+            background-color: white;
+
+            &:nth-child(1) {
+                transform: translateY(6px) rotate(45deg);
+            }
+
+            &:nth-child(2) {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            &:nth-child(3) {
+                transform: translateY(-6px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+/* ==================== Boton Whatsapp ==================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    width: 46px;
+    height: 46px;
+    background: $whatsapp-color-segundario;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px $whatsapp-shadow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.7);
+    transition: opacity 0.4s, transform 0.4s;
+}
+.whatsapp-float.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+.whatsapp-float img {
+    width: 24px;
+    height: 24px;
+}
+
+.whatsapp-chat-window {
+    display: none;
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 300px;
+    min-width: unset;
+    max-width: 96vw;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px $whatsapp-chat-shadow;
+    z-index: 10000;
+    overflow: hidden;
+    animation: whatsapp-pop 0.5s;
+    font-family: $fuente-principal;
+    font-size: 0.93rem;
+    padding: 0;
+}
+.whatsapp-chat-window.active {
+    display: block;
+}
+@keyframes whatsapp-pop {
+    0% { transform: scale(0.7);}
+    100% { transform: scale(1);}
+}
+.chat-header {
+    background: #f7f7f7;
+    color: #333;
+    padding: 7px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chat-header button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: $whatsapp-color-segundario;
+    cursor: pointer;
+    font-weight: bold;
+}
+.chat-body {
+    background: url('https://i.pinimg.com/originals/2b/45/cf/2b45cfec4c0d3c56aed4ccd30b61bd3a.jpg');
+    background-size: cover;
+    padding: 10px 8px 12px 8px;
+    min-height: 80px;
+    max-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#whatsapp-typing {
+    margin-bottom: 10px;
+}
+.typing-dots {
+    display: inline-block;
+    vertical-align: middle;
+    height: 10px;
+    margin-left: 2px;
+}
+.typing-dots .dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 1px;
+    background: $whatsapp-color-segundario;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: typing-bounce 5s infinite alternate;
+}
+.typing-dots .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.typing-dots .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+@keyframes typing-bounce {
+    0% { transform: translateY(0);}
+    100% { transform: translateY(-5px);}
+}
+.chat-message {
+    background: #fff;
+    border-radius: 12px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px $whatsapp-msg-shadow;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.4;
+    border-left: 4px solid $whatsapp-color-segundario;
+}
+.chat-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $whatsapp-color-segundario;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 16px;
+    padding: 7px 14px;
+    text-decoration: none;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px $whatsapp-btn-shadow;
+    transition: background 0.2s;
+    gap: 6px;
+}
+.chat-btn img {
+    width: 18px;
+    height: 18px;
+}
+.chat-btn:hover {
+    background: $whatsapp-bg-hover;
+}

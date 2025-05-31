@@ -1,0 +1,589 @@
+/* ==================== MEDIA QUERIES ==================== */
+
+/* 1. MÓVIL (hasta 425px) */
+@media (max-width: 426px) {
+    header {
+        background-position: center center;
+        background-size: cover;
+        background-attachment: scroll;
+        min-height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        left: 0;
+        right: 0;
+        overflow-x: hidden;
+
+        .header-container {
+        padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        }
+
+        .logo {
+        margin-bottom: 0;
+        text-align: left;
+        margin-right: auto;
+        position: relative;
+        z-index: 1;
+
+        h1 {
+            text-align: left;
+            font-size: 24px;
+            margin-left: 5px;
+            position: relative;
+            z-index: 1;
+        }
+        }
+
+        .menu {
+        margin-left: auto;
+        }
+    }
+
+/* Menú hamburguesa */
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        z-index: 99999;
+    }
+
+/* Menú móvil */
+    .menu ul {
+        display: none;
+    }
+
+    .enlaces-index {
+        display: none !important;
+        position: fixed;
+        top: 60px;
+        right: 15px;
+        background-color: white;
+        width: 200px;
+        margin-right: 15px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        z-index: 9998;
+        padding: 10px;
+        @include transicion;
+        opacity: 0;
+        transform: translateY(-10px);
+
+        &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: 15px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+        }
+
+        &.open {
+        display: block !important;
+        opacity: 1;
+        transform: translateY(0);
+
+        ul {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+
+            li {
+            margin: 5px 0;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                font-size: 16px;
+                padding: 8px 10px;
+                display: block;
+                color: #333;
+                @include transicion;
+                position: relative;
+                z-index: 9998;
+
+                &:hover {
+                background-color: $fondo-claro;
+                color: #b78d6b;
+                }
+            }
+            }
+        }
+        }
+    }
+
+/* Sección hero */
+    .hero-section {
+        padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+
+        .hero-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+
+        h2 {
+            font-size: 32px;
+        }
+        }
+    }
+
+    .seccion-hero {
+        max-width: 100%;
+        padding-top: 30px;
+        width: 100%;
+        box-sizing: border-box;
+
+        h1 {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+        }
+    }
+
+/* Productos */
+    .products-grip {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+    }
+
+    .products {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+    }
+
+/* Instagram */
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 20px auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 8px;
+        max-width: 350px;
+    }
+
+    .inst-body {
+        img, video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        }
+    }
+
+/* Formulario */
+    .formulario-contacto {
+        width: 95%;
+        padding: 20px;
+    }
+
+/* Páginas internas */
+    .pages {
+        header {
+        height: 90px;
+        min-height: auto;
+        }
+
+        .logo-container {
+        margin-top: 20px;
+        width: auto;
+        margin-left: 15px;
+        }
+
+        .logo {
+        height: 70px;
+        }
+
+        .enlaces-index {
+        display: none !important;
+        position: fixed;
+        top: 60px;
+        right: 15px;
+        background-color: white;
+        width: 200px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        z-index: 99998;
+        padding: 10px;
+
+        &.open {
+            display: block !important;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+    }
+
+/* Carrusel */
+    .carousel {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+        padding: 0 10px;
+
+        .carousel-inner {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    /* WhatsApp Chat Responsive */
+    .whatsapp-float {
+        bottom: 18px;
+        right: 18px;
+        width: 40px;
+        height: 40px;
+    }
+    .whatsapp-float img {
+        width: 20px;
+        height: 20px;
+    }
+    .whatsapp-chat-window {
+        width: 94vw;
+        max-width: 97vw;
+        right: 2vw;
+        bottom: 65px;
+        border-radius: 10px;
+        font-size: 0.89rem;
+        padding: 0;
+    }
+    .chat-header {
+        padding: 6px 8px;
+        font-size: 13px;
+    }
+    .chat-body {
+        padding: 7px 5px 10px 5px;
+        min-height: 60px;
+        max-height: 50vh;
+    }
+    .chat-message {
+        padding: 7px 8px;
+        margin-bottom: 7px;
+        font-size: 12px;
+        border-radius: 6px;
+    }
+    .chat-btn {
+        font-size: 13px;
+        padding: 6px 10px;
+        border-radius: 12px;
+        gap: 5px;
+    }
+    .chat-btn img {
+        width: 16px;
+        height: 16px;
+    }
+    #whatsapp-typing {
+        margin-bottom: 8px !important;
+    }
+}
+
+/* 2. Tablet (426px a 1023px) */
+@media (min-width: 426px) and (max-width: 1023px) {
+    header {
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+
+        .header-container {
+        padding: 15px 30px;
+        position: relative;
+        }
+    }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 9999;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .enlaces-index {
+        display: none !important;
+        position: fixed;
+        top: 70px;
+        right: 20px;
+        background-color: white;
+        width: 220px;
+        margin-right: 15px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        z-index: 9998;
+        padding: 10px;
+        @include transicion;
+        opacity: 0;
+        transform: translateY(-10px);
+
+        &::before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        right: 15px;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid white;
+        }
+
+        &.open {
+        display: block !important;
+        opacity: 1;
+        transform: translateY(0);
+
+        ul {
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+
+            li {
+            margin: 5px 0;
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            a {
+                font-size: 16px;
+                padding: 8px 10px;
+                display: block;
+                color: #333;
+                @include transicion;
+                position: relative;
+                z-index: 9998;
+
+                &:hover {
+                background-color: $fondo-claro;
+                color: #b78d6b;
+                }
+            }
+            }
+        }
+        }
+    }
+
+    .hamburger.open {
+        background-color: #b78d6b;
+
+        span {
+        background-color: white;
+
+        &:nth-child(1) {
+            transform: translateY(6px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(-6px) rotate(-45deg);
+        }
+        }
+    }
+
+/* Sección hero */
+    .hero-section {
+        padding: 0 50px;
+
+        .hero-content h2 {
+        font-size: 54px;
+        }
+    }
+
+/* Productos */
+    .products-grip {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+/* Carrusel */
+    .carousel {
+        display: none !important;
+    }
+
+/* Páginas internas */
+    .pages {
+        header {
+        height: 90px;
+        min-height: auto;
+        }
+
+        .logo-container {
+        margin-top: 20px;
+        width: auto;
+        margin-left: 15px;
+        }
+
+        .logo {
+        height: 70px;
+        }
+
+        .enlaces-index {
+        display: none !important;
+
+        &.open {
+            display: block !important;
+        }
+        }
+    }
+
+    /* WhatsApp Chat Responsive */
+    .whatsapp-float {
+        bottom: 22px;
+        right: 22px;
+        width: 44px;
+        height: 44px;
+    }
+    .whatsapp-float img {
+        width: 22px;
+        height: 22px;
+    }
+    .whatsapp-chat-window {
+        width: 220px;
+        right: 18px;
+        bottom: 80px;
+        border-radius: 12px;
+        font-size: 0.91rem;
+        padding: 0;
+    }
+    .chat-header {
+        padding: 7px 9px;
+        font-size: 13.5px;
+    }
+    .chat-body {
+        padding: 10px 7px 13px 7px;
+        min-height: 70px;
+        max-height: 50vh;
+    }
+    .chat-message {
+        padding: 8px 10px;
+        margin-bottom: 9px;
+        font-size: 12.5px;
+        border-radius: 7px;
+    }
+    .chat-btn {
+        font-size: 13.5px;
+        padding: 7px 12px;
+        border-radius: 13px;
+        gap: 6px;
+    }
+    .chat-btn img {
+        width: 17px;
+        height: 17px;
+    }
+    #whatsapp-typing {
+        margin-bottom: 10px !important;
+    }
+}
+
+/* 3. Escritorio (1024px en adelante) */
+@media (min-width: 1024px) {
+    header {
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+
+        .header-container {
+        padding: 20px 50px;
+        }
+    }
+
+/* Menú escritorio */
+    .hamburger {
+        display: none;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        li {
+        margin: 0 15px;
+        }
+    }
+
+    .enlaces-index {
+        display: flex !important;
+        margin-right: 15px;
+
+        ul {
+        display: flex !important;
+        }
+    }
+
+/* Sección hero */
+    .hero-section {
+        padding: 0 50px;
+
+        .hero-content h2 {
+        font-size: 54px;
+        }
+    }
+
+/* Productos */
+    .products-grip {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+/* Carrusel */
+    .carousel {
+        display: none !important;
+    }
+
+/* Páginas internas */
+    .pages {
+        header {
+        height: 90px;
+        min-height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        .logo-container {
+        margin-top: 0;
+        width: auto;
+        margin-left: 15px;
+        }
+
+        .logo {
+        height: 90px;
+        }
+    }
+}
