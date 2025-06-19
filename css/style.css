@@ -681,6 +681,7 @@ header.pages .logo {
 
 /* ==================== SECCIÓN DE TESTIMONIOS ==================== */
 .seccion-infe {
+  margin-top: 100px;
   display: flex;
   background-color: #e0d3c5;
   justify-content: center;
@@ -695,7 +696,7 @@ header.pages .logo {
   padding: 10px;
   border-radius: 8px;
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .test-img {
