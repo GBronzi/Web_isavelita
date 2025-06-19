@@ -3,17 +3,18 @@
 Sitio web para Isavelita, emprendimiento de velas artesanales y piezas decorativas.
 
 ## Descripción
-Isavelita es una marca dedicada a la creación de velas de soja, velas de molde y piezas decorativas hechas a mano. El sitio web presenta productos destacados, catálogo, testimonios, información de contacto y enlaces a redes sociales.
+Isavelita es una marca dedicada a la creación de velas de soja, velas de molde y piezas decorativas hechas a mano. El sitio web presenta productos destacados, un catálogo completo, testimonios de clientes, información de contacto y enlaces a las redes sociales.
 
 ## Características
-- Diseño responsive (adaptado a mobile y desktop)
-- Menú hamburguesa flotante en dispositivos móviles
-- Carrusel de imágenes en la página principal
-- Secciones de productos, Instagram, testimonios y formulario de contacto
-- Paleta de colores cálidos y tipografía personalizada
-- Código HTML y CSS prolijo y semántico
+- **Diseño Responsive:** Totalmente adaptado a dispositivos móviles y de escritorio.
+- **Menú Hamburguesa:** Menú de navegación flotante y funcional en vistas móviles.
+- **Carrusel de Imágenes:** En la página principal para destacar productos.
+- **Componentes Interactivos:** Secciones de productos, galería de Instagram, testimonios y formulario de contacto.
+- **Chat de WhatsApp:** Widget flotante para una comunicación directa y rápida.
+- **Paleta de Colores:** Tonos cálidos y una tipografía personalizada que reflejan la identidad de la marca.
+- **Código Optimizado:** HTML semántico, SASS para un CSS modular y JavaScript para interactividad.
 
-## Estructura del proyecto
+## Estructura del Proyecto
 ```
 Isavelita/
 ├── index.html
@@ -22,10 +23,13 @@ Isavelita/
 │   ├── contacto.html
 │   ├── cursos.html
 │   ├── mayorista.html
-│   ├── producto-detalle.html
 │   └── tienda.html
 ├── css/
-│   └── style.css
+│   ├── style.scss
+│   ├── _base.scss
+│   ├── _header.scss
+│   ├── _products.scss
+│   └── (otros parciales de SASS...)
 ├── media/
 │   ├── img/
 │   ├── icons/
@@ -34,27 +38,28 @@ Isavelita/
 └── README.md
 ```
 
-## Instalación y uso
+## Instalación y Uso
 1. Clona este repositorio:
    ```
    git clone https://github.com/tuusuario/isavelita.git
    ```
 2. Abre el archivo `index.html` en tu navegador.
-3. Para ver el sitio online, puedes usar GitHub Pages.
+3. Si realizas cambios en los archivos SASS (`.scss`), necesitarás un compilador (como Live Sass Compiler en VSCode) para generar el archivo `style.css`.
 
-## Tecnologías utilizadas
-- HTML5 semántico
-- CSS3 (Flexbox, Grid, Media Queries)
-- Bootstrap 5 
+## Tecnologías Utilizadas
+- **HTML5 Semántico**
+- **SASS (CSS3):** Para estilos modulares y organizados. Se utilizan variables, anidación y parciales.
+- **Bootstrap 5:** Para el sistema de grid y componentes como el carrusel.
+- **JavaScript (ES6):** Para la interactividad del menú hamburguesa y el chat de WhatsApp.
 
-## Buenas prácticas
-- Código tabulado y comentado
-- Uso de rutas relativas
-- Imágenes optimizadas y con `alt` descriptivo
-- Clases CSS claras y reutilizables
-- Sin overflow horizontal
+## Buenas Prácticas
+- Código bien estructurado y comentado.
+- Uso de rutas relativas para portabilidad.
+- Imágenes optimizadas en formato `.webp` y con `alt` descriptivo.
+- Clases CSS claras y reutilizables bajo la metodología BEM (Bloque, Elemento, Modificador).
+- Diseño sin overflow horizontal para una experiencia de usuario fluida.
 
 ## Autoría
-Desarrollado por Mauricio Bronzi (2025).
+Desarrollado por Mauricio Bronzi.
 
 ---
