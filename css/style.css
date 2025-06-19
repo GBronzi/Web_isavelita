@@ -38,7 +38,7 @@ body.body-infe {
   font-weight: normal;
   font-style: normal;
 }
-h1, h3, h4 {
+h1, h3 {
   font-family: "TrajanPro3Regular", serif;
   color: #000000;
   text-shadow: 1px 1px 4px rgba(56, 55, 55, 0.768627451);
@@ -46,6 +46,23 @@ h1, h3, h4 {
 
 h1 {
   font-size: 30px;
+}
+
+h2 {
+  font-family: "TrajanPro3Regular", serif;
+  color: #000000;
+  text-shadow: 1px 1px 4px rgba(56, 55, 55, 0.768627451);
+  margin-top: 50px;
+}
+
+.titulo {
+  color: #4A2F2F;
+  font-size: 28px;
+  margin-top: 50px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  font-family: "TrajanPro3Regular", serif;
 }
 
 .prodest-title {
@@ -66,12 +83,16 @@ h1 {
   transform: translateX(-50%);
   width: 50px;
   height: 2px;
-  background-color: #D9BEA7;
+  background-color: #e0d3c5;
 }
 
 .subtitle-inf {
   font-size: 20px;
   margin-top: 50px;
+}
+
+.separador {
+  margin-top: 10px;
 }
 
 /* ==================== MENÚ HAMBURGUESA ==================== */
@@ -486,7 +507,7 @@ header.pages .logo {
   text-transform: none;
 }
 .seccion-hero button:hover {
-  background-color: rgb(173.7692307692, 112.2259615385, 77.2307692308);
+  background-color: rgb(206.6923076923, 168.1971153846, 146.3076923077);
 }
 
 .btn-productos {
@@ -502,7 +523,7 @@ header.pages .logo {
   text-align: center;
 }
 .btn-productos:hover {
-  background-color: rgb(112.2807017544, 7.7192982456, 7.7192982456);
+  background-color: rgb(207.7192982456, 14.2807017544, 14.2807017544);
 }
 
 /* ==================== SECCIÓN DE PRODUCTOS ==================== */
@@ -530,7 +551,7 @@ header.pages .logo {
 }
 
 .products {
-  background-color: #D9BEA7;
+  background-color: #e0d3c5;
   border: 2px solid #000000;
   margin-top: 20px;
   border-radius: 5px;
@@ -564,15 +585,15 @@ header.pages .logo {
 .category-nav .nav-pills .nav-link {
   color: #4A2F2F;
   background-color: transparent;
-  border: 1px solid #D9BEA7;
+  border: 1px solid #e0d3c5;
   margin: 0 5px;
   transition: all 0.3s ease;
 }
 .category-nav .nav-pills .nav-link:hover {
-  background-color: rgba(217, 190, 167, 0.2);
+  background-color: rgba(224, 211, 197, 0.2);
 }
 .category-nav .nav-pills .nav-link.active {
-  background-color: #D9BEA7;
+  background-color: #e0d3c5;
   color: #4A2F2F;
   font-weight: bold;
 }
@@ -588,12 +609,12 @@ header.pages .logo {
 .section-divider {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(217, 190, 167, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(77, 25, 25, 0.8), rgba(0, 0, 0, 0));
   margin: 40px 0;
 }
 
 .btn-mayorista-form {
-  background-color: #D9BEA7;
+  background-color: #e0d3c5;
   color: #4A2F2F;
   border: 1px solid #4A2F2F;
   border-radius: 10px;
@@ -661,7 +682,7 @@ header.pages .logo {
 /* ==================== SECCIÓN DE TESTIMONIOS ==================== */
 .seccion-infe {
   display: flex;
-  background-color: #f0c3a9;
+  background-color: #e0d3c5;
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
@@ -794,7 +815,7 @@ header.pages .logo {
   flex-grow: 2;
 }
 .boton-primario:hover {
-  background-color: rgb(164.3206521739, 110.6793478261, 110.6793478261);
+  background-color: rgb(203.6793478261, 173.3206521739, 173.3206521739);
 }
 
 .boton-secundario {
@@ -803,7 +824,7 @@ header.pages .logo {
   flex-grow: 1;
 }
 .boton-secundario:hover {
-  background-color: rgb(214.5, 214.5, 214.5);
+  background-color: hsl(0, 0%, 104.1176470588%);
 }
 
 /* ==================== MEDIA QUERIES ==================== */

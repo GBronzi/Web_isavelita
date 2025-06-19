@@ -1,8 +1,9 @@
-@import "variable";
-@import "base";
-@import "header";
-@import "hero";
-@import "products";
-@import "inst-test-form";
-@import "media-queries";
-@import "footer";
+@use "sass:color";
+@use "variable";
+@use "base";
+@use "header";
+@use "hero";
+@use "products";
+@use "inst-test-form";
+@use "media-queries";
+@use "footer";

@@ -1,9 +1,9 @@
 /* ==================== VARIABLES & MIXINS ==================== */
 
 $color-principal: #4A2F2F;
-$color-secundario: #D9BEA7;
+$color-secundario: #e0d3c5;
 $color-accento: #BF8C6F;
-$color-fondo-inst-test: #f0c3a9;
+$color-fondo-inst-test: #e0d3c5;
 $accento-oscuro: #5c2022;
 $fondo-claro: #f5efe6;
 $fondo-mas-claro: #FEFBF8;
@@ -21,6 +21,12 @@ $whatsapp-msg-shadow: #a03a3a0a;
 $fuente-principal: 'Playfair Display', serif;
 $fuente-secundaria: 'TrajanPro3Regular', serif;
 $fuente-terciaria: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+@mixin letras {
+    font-family: $fuente-secundaria;
+    color: #000000;
+    text-shadow: 1px 1px 4px #383737c4;
+}
 
 @mixin transicion($propiedad: all, $duracion: 0.3s, $easing: ease) {
     transition: $propiedad $duracion $easing;

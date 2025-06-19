@@ -1,3 +1,5 @@
+@use "variable" as *;
+@use "sass:color";
 /* ==================== SECCIÓN INSTAGRAM ==================== */
 .instagram-grid {
     @include grid-responsive(3);
@@ -164,7 +166,7 @@
     flex-grow: 2;
 
     &:hover {
-        background-color: darken(#b88e8e, 10%);
+        background-color: color.adjust(#b88e8e, $lightness: 10%);
     }
 }
 
@@ -174,6 +176,6 @@
     flex-grow: 1;
 
     &:hover {
-        background-color: darken(#f0f0f0, 10%);
+        background-color: color.adjust(#f0f0f0, $lightness: 10%);
     }
 }

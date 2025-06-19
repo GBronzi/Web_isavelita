@@ -1,3 +1,4 @@
+@use "variable" as *;
 /* ==================== ESTILOS BASE ==================== */
 * {
     margin: 0;
@@ -37,14 +38,27 @@ body {
     font-style: normal;
 }
 
-h1, h3, h4 {
-    font-family: $fuente-secundaria;
-    color: #000000;
-    text-shadow: 1px 1px 4px #383737c4;
+h1, h3 {
+    @include letras;
 }
 
 h1 {
     font-size: 30px;
+}
+
+h2 {
+    @include letras;
+    margin-top: 50px;
+}
+
+.titulo {
+    color: $color-principal;
+    font-size: 28px;
+    margin-top: 50px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-family: $fuente-secundaria;
 }
 
 .prodest-title {
@@ -74,6 +88,9 @@ h1 {
     margin-top: 50px;
 }
 
+.separador {
+    margin-top:10px;
+}
 /* ==================== MENÚ HAMBURGUESA ==================== */
 .hamburger {
     display: none;
